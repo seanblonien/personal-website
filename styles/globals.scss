@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Play");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Play", sans-serif;
+  font-size: 18px;
+  color: #343a40;
+  max-height: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
