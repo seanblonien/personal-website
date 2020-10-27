@@ -1,8 +1,8 @@
-import {GetStaticProps, GetStaticPaths} from 'next';
+// import {GetStaticProps, GetStaticPaths} from 'next';
 import Head from 'next/head';
 import React from 'react';
 import Layout from '../../components/layout';
-import {getAllPostIds, getPostData} from '../../lib/posts';
+// import {getAllPostIds, getPostData} from '../../lib/posts';
 
 export default function Post({
   postData,
@@ -27,19 +27,19 @@ export default function Post({
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostIds();
-  return {
-    paths,
-    fallback: false,
-  };
-};
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const paths = getAllPostIds();
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps: GetStaticProps = async ({params}) => {
-  const postData = await getPostData(params.id as string);
-  return {
-    props: {
-      postData,
-    },
-  };
-};
+// export const getStaticProps: GetStaticProps = async ({params}) => {
+//   const postData = await getPostData(params.id as string);
+//   return {
+//     props: {
+//       postData,
+//     },
+//   };
+// };
