@@ -38,7 +38,7 @@ module.exports = {
       'plugin:@typescript-eslint/recommended',
       'plugin:css-modules/recommended',
     ],
-    ignorePatterns: ['node_modules', 'build', 'docs', 'lib', 'react-app-env.d.ts', 'next.config.js'],
+    ignorePatterns: ['node_modules', 'build', 'docs', 'lib', 'react-app-env.d.ts', 'next.config.js', '.eslintrc.js'],
     settings: {
       'import/resolver': {
         node: {

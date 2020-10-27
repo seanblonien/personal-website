@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --cache --ext .ts,.js,.tsx,.jsx . && stylelint **/*.css",
-    "lint:fix": "eslint --cache --ext .ts,.js,.tsx,.jsx . --fix && stylelint **/*.css --fix"
+    "lint": "eslint --cache --ext .ts,.js,.tsx,.jsx . && stylelint **/*css",
+    "lint:fix": "eslint --cache --ext .ts,.js,.tsx,.jsx . --fix && stylelint **/*css --fix"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",

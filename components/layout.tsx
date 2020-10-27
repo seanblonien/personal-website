@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import React from 'react';
 import {NavbarData} from '../lib/data';
 // eslint-disable-next-line css-modules/no-unused-class
@@ -9,13 +8,7 @@ Layout.defaultProps = {
   home: undefined,
 };
 
-export default function Layout({
-  children,
-  home,
-}: {
-  children: React.ReactNode;
-  home?: boolean;
-}): JSX.Element {
+export default function Layout(): JSX.Element {
   return (
     <>
       <Head>
@@ -28,10 +21,16 @@ export default function Layout({
         />
         <meta name='description' content="Sean Blonien's personal website." />
       </Head>
-      <header className={`nav-bar ${styles.fromAbove}`}>
-        <h1 className='expand text-center text-white d-inline'>Sean Blonien</h1>
-        <img src='/images/me.jpg' alt='Sean Blonien Profile' className='nav-icon' />
-        <div className='nav-links'>
+      <header className={`${styles.navBar} ${styles.fromAbove}`}>
+        <div className={`${styles.gridContainer}`}>
+          <p className={`${styles.navTitle} ${styles.gridItem} ${styles.expand}`}>Sean Blonien</p>
+          <img
+            src='/images/me.jpg'
+            alt='Sean Blonien Profile'
+            className={`${styles.navIcon} ${styles.gridItem}`}
+          />
+        </div>
+        <div className={`${styles.gridItem} ${styles.gridContainer}`}>
           {NavbarData.map(item => (
             <a
               href={item.href}
@@ -46,12 +45,9 @@ export default function Layout({
           ))}
         </div>
       </header>
-      <main>{children}</main>
-      {!home && (
-        <div>
-          <Link href='/'>← Back to home</Link>
-        </div>
-      )}
+      <main>
+        <h1>About Me</h1>
+      </main>
     </>
   );
 }
