@@ -18,6 +18,18 @@
   }
 }
 
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
 .fromAbove {
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -46,10 +58,17 @@
 .gridContainer {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
   width: 100%;
-  max-width: 100%s;
+  max-width: 100%;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.spaceAround {
+  justify-content: space-around;
 }
 
 .navBar {
@@ -66,12 +85,16 @@
   margin: auto;
 }
 
+.textCenter {
+  text-align: center;
+}
+
 .navTitle {
-  font-size: 72px;
+  @extend .textCenter;
   color: #f1f2f4;
   align-content: center;
   justify-content: center;
-  text-align: center;
+  margin: 0px 20px;
 }
 
 .navLinks {

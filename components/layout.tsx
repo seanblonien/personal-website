@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+import Typewriter from 'typewriter-effect';
 import {NavbarData} from '../lib/data';
 // eslint-disable-next-line css-modules/no-unused-class
 import styles from '../styles/styles.module.scss';
@@ -22,15 +23,19 @@ export default function Layout(): JSX.Element {
         <meta name='description' content="Sean Blonien's personal website." />
       </Head>
       <header className={`${styles.navBar} ${styles.fromAbove}`}>
-        <div className={`${styles.gridContainer}`}>
-          <p className={`${styles.navTitle} ${styles.gridItem} ${styles.expand}`}>Sean Blonien</p>
-          <img
-            src='/images/me.jpg'
-            alt='Sean Blonien Profile'
-            className={`${styles.navIcon} ${styles.gridItem}`}
-          />
+        <div className={`${styles.gridContainer} ${styles.center}`}>
+          <div className={`${styles.gridItem} ${styles.gridContainer} ${styles.center}`}>
+            <h1 className={`${styles.navTitle} ${styles.expand}`}>Sean Blonien</h1>
+            <img
+              src='/images/me.jpg'
+              alt='Sean Blonien Profile'
+              className={`${styles.navIcon} ${styles.expand}`}
+            />
+          </div>
         </div>
-        <div className={`${styles.gridItem} ${styles.gridContainer}`}>
+        <div
+          className={`${styles.gridItem} ${styles.gridContainer} ${styles.center} ${styles.spaceAround}`}
+        >
           {NavbarData.map(item => (
             <a
               href={item.href}
@@ -40,13 +45,31 @@ export default function Layout(): JSX.Element {
               data-toggle='tooltip'
               data-placement='bottom'
             >
-              <img src={item.src} className='nav-icon expand' alt={item.alt} />
+              <img src={item.src} className={`${styles.navIcon} ${styles.expand}`} alt={item.alt} />
             </a>
           ))}
         </div>
       </header>
-      <main>
-        <h1>About Me</h1>
+      <main className={`${styles.center}`}>
+        <h2 className={styles.textCenter}>About Me</h2>
+        <h3 className={styles.textCenter}>
+          I am a
+          <Typewriter
+            component='span'
+            options={{
+              strings: [
+                ' software engineer.',
+                ' programmer.',
+                ' technophile.',
+                ' designer.',
+                ' dreamer.',
+              ],
+              autoStart: true,
+              loop: true,
+              skipAddStyles: true,
+            }}
+          />
+        </h3>
       </main>
     </>
   );
