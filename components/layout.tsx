@@ -1,9 +1,11 @@
+/* eslint-disable react/no-array-index-key */
 import Head from 'next/head';
 import React from 'react';
-import Typewriter from 'typewriter-effect';
-import {NavbarData} from '../lib/data';
+import Carousel from 'react-elastic-carousel';
+import {CarouselData, NavbarData} from '../lib/data';
 // eslint-disable-next-line css-modules/no-unused-class
 import styles from '../styles/styles.module.scss';
+import {noop} from './utils';
 
 Layout.defaultProps = {
   home: undefined,
@@ -22,7 +24,7 @@ export default function Layout(): JSX.Element {
         />
         <meta name='description' content="Sean Blonien's personal website." />
       </Head>
-      <header className={`${styles.navBar} ${styles.fromAbove}`}>
+      <header className={`${styles.navBar} ${styles.fromAbove} ${styles.gridContainer}`}>
         <div className={`${styles.gridContainer} ${styles.center}`}>
           <div className={`${styles.gridItem} ${styles.gridContainer} ${styles.center}`}>
             <h1 className={`${styles.navTitle} ${styles.expand}`}>Sean Blonien</h1>
@@ -50,26 +52,45 @@ export default function Layout(): JSX.Element {
           ))}
         </div>
       </header>
-      <main className={`${styles.center}`}>
-        <h2 className={styles.textCenter}>About Me</h2>
-        <h3 className={styles.textCenter}>
-          I am a
-          <Typewriter
-            component='span'
-            options={{
-              strings: [
-                ' software engineer.',
-                ' programmer.',
-                ' technophile.',
-                ' designer.',
-                ' dreamer.',
-              ],
-              autoStart: true,
-              loop: true,
-              skipAddStyles: true,
-            }}
-          />
-        </h3>
+      <main>
+        <Carousel
+          renderArrow={({type, onClick}): JSX.Element => (
+            <div onClick={onClick} onKeyPress={noop} role='button' tabIndex={0}>
+              <img
+                src={type === 'PREV' ? '/images/back.svg' : '/images/next.svg'}
+                alt={type === 'PREV' ? 'Previous' : 'Next'}
+                aria-label={type === 'PREV' ? 'Previous' : 'Next'}
+                className={type === 'PREV' ? styles.carouselIconPrev : styles.carouselIconNext}
+              />
+            </div>
+          )}
+          renderPagination={({pages, activePage, onClick}): JSX.Element => (
+            <div className={styles.carouselIndicators}>
+              {pages.map((page, i) => (
+                <button
+                  type='button'
+                  key={i}
+                  onClick={(): void => onClick(String(i))}
+                  className={
+                    activePage === i
+                      ? `${styles.active} ${styles.carouselIndicator} ${styles.btn} ${styles.expand}`
+                      : `${styles.carouselIndicator} ${styles.btn} ${styles.expand}`
+                  }
+                  tabIndex={activePage === i ? -1 : 0}
+                >
+                  {CarouselData[i].title}
+                </button>
+              ))}
+            </div>
+          )}
+          className={styles.carousel}
+        >
+          {CarouselData.map(page => (
+            <div key={page.id} className={`${styles.center} ${styles.page}`}>
+              {page.body}
+            </div>
+          ))}
+        </Carousel>
       </main>
     </>
   );

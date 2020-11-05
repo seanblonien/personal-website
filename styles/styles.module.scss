@@ -1,3 +1,5 @@
+@import "media-queries.scss";
+
 /* Slide down animation */
 @keyframes slideInFromAbove {
   from {
@@ -20,14 +22,23 @@
 
 h1 {
   font-size: 4em;
+  @include lt-md {
+    font-size: 3em;
+  }
+  margin: 10px 0px;
 }
 
 h2 {
   font-size: 3em;
 }
 
-h2 {
+h3 {
   font-size: 2.5em;
+}
+
+p {
+  max-width: 600px;
+  text-align: justify;
 }
 
 .fromAbove {
@@ -44,13 +55,17 @@ h2 {
   animation-name: slideInFromBelow;
 }
 
+.scale {
+  transform: scale(1.1);
+}
+
 /*Expand animation for hovering over words/icons*/
 .expand {
   transition: all 0.2s ease-in-out;
 }
 
 .expand:hover {
-  transform: scale(1.1);
+  @extend .scale;
 }
 
 /* Navigation bar */
@@ -62,19 +77,27 @@ h2 {
   max-width: 100%;
 }
 
+.gridContainerCol {
+  @extend .gridContainer;
+  flex-direction: column;
+}
+
 .center {
   align-items: center;
   justify-content: center;
 }
 
 .spaceAround {
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .navBar {
   background-color: #343a40;
   min-width: 350px;
   padding: 10px;
+  @include lt-md {
+    flex-direction: column;
+  }
 }
 
 .noWrap {
@@ -94,7 +117,7 @@ h2 {
   color: #f1f2f4;
   align-content: center;
   justify-content: center;
-  margin: 0px 20px;
+  margin: 0px 10px;
 }
 
 .navLinks {
@@ -110,148 +133,74 @@ h2 {
   height: 65px;
 }
 
-/* Carousel */
-
-.carouselInner {
-  text-align: center;
-}
-
-.flex {
-  display: flex;
-  flex-flow: column wrap;
-  padding: 3px;
-  max-height: none;
-  width: 800px;
-  overflow: hidden;
-  align-content: flex-start;
-  margin: 0px;
-}
-
-.projectP {
-  width: 700px;
-}
-
-.projectPic {
-  width: 200px;
-  height: 150px;
-}
-
-.carouselProjects {
-  text-align: center;
-}
-
-.carousel-item-content {
-  text-align: center;
-  margin: 5px auto;
-  max-width: 900px;
-  min-width: 500px;
-  overflow: visible;
-}
-
-.carousel-item-content p,
-.carousel-item-content h3,
-.carousel-item-content h4 {
-  text-align: justify;
-  padding: 10px;
-  max-width: 700px;
-}
-
-.work-exp {
-  text-align: center;
-  margin: 5px auto;
-  max-width: 800px;
-}
-
-.carousel-item h1 {
-  font-size: 72px;
-}
-
-.carousel-item-content h2 {
-  padding: 0px 50px;
-}
-
-.indicators-container {
-  position: absolute;
-  left: -50px;
-  bottom: -100px;
-  width: 100%;
-}
-
-.carousel-indicators li,
-.carousel-indicators li.active {
-  border-style: none;
+.carouselIcon {
   cursor: pointer;
-  background-color: transparent;
-  text-indent: 0;
-}
-
-.indic {
-  margin-left: 60px !important;
-  margin-right: 75px !important;
-}
-
-.btn.round.btn-dark {
-  transition: all 0.2s ease-in-out;
-}
-
-.btn.round.btn-dark:hover {
-  transform: scale(1.1);
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  width: 1em;
-  height: 1em;
+  position: absolute;
+  top: 50%;
+  width: 3em;
+  height: 3em;
   -webkit-transition-property: width, height;
-  /* Safari */
   -webkit-transition-duration: 1s;
-  /* Safari */
   transition-property: width, height;
   transition-duration: 1s;
+  @include lt-sm {
+    display: none;
+  }
 }
 
-.carousel-control-prev-icon {
-  background-image: url("/images/back.svg");
+.carouselIcon:hover {
+  height: 4em;
+  width: 4em;
 }
 
-.carousel-control-next-icon {
-  background-image: url("/images/next.svg");
+.carouselIconPrev {
+  @extend .carouselIcon;
+  left: 0;
 }
 
-.carousel-arrow:hover .carousel-control-prev-icon,
-.carousel-arrow:hover .carousel-control-next-icon {
-  height: 6em;
-  width: 6em;
-  -webkit-transition-property: width, height;
-  /* Safari */
-  -webkit-transition-duration: 1s;
-  /* Safari */
-  transition-property: width, height;
-  transition-duration: 1s;
+.carouselIconNext {
+  @extend .carouselIcon;
+  right: 0;
 }
 
-.btn.round {
-  border-radius: 24px;
+.page {
+  max-width: 600px;
 }
 
-.tech-stack {
-  margin-left: 12px;
-  margin-bottom: 15px;
-  text-align: left;
+.carousel {
+  margin: 10px auto 30px;
 }
 
-#typewriter {
-  font-size: 40px;
+.carouselIndicators {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
 }
 
-.dot {
-  height: 25px;
-  width: 25px;
-  background-color: #c40000;
-  border-radius: 50%;
+.carouselIndicator {
+  margin: 0px 5px;
+}
+
+.active {
+  @extend .scale;
+  font-weight: bold;
+}
+
+.btn {
+  cursor: pointer;
   display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #343a40;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  padding: 6px 12px;
 }
 
-.tooltip {
-  pointer-events: none;
+.typewriterWrapper {
+  @include lt-md {
+    height: 2.5em;
+  }
 }

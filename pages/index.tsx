@@ -7,7 +7,7 @@ import {siteTitle} from '../lib/data';
 
 export default function Home(): JSX.Element {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>
