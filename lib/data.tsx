@@ -1,8 +1,6 @@
 import styles from '../styles/styles.module.scss';
 import Typewriter from 'typewriter-effect';
-
-const name = 'Sean Blonien';
-export const siteTitle = `${name}'s Website`;
+import { About } from '../components/about';
 
 export interface NavbarDataItem {
   href: string;
@@ -64,34 +62,7 @@ export const CarouselData = [
   {
     id: 'about',
     title: 'About',
-    body: (
-      <>  
-        <h2 className={styles.textCenter}>About Me</h2>
-        <h3 className={`${styles.textCenter} ${styles.typewriterWrapper}`}>
-          I am a
-          <Typewriter
-            component='span'
-            options={{
-              strings: [
-                ' software engineer.',
-                ' programmer.',
-                ' technophile.',
-                ' designer.',
-                ' dreamer.',
-              ],
-              autoStart: true,
-              loop: true,
-              skipAddStyles: true
-            }}
-          />
-        </h3>
-        <div className={`${styles.gridContainerCol} ${styles.center}`}>
-          {IntroData.map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
-        </div>
-      </>
-    )
+    body: <About introData={IntroData}/>
   },
   {
     id: 'projects',

@@ -23,7 +23,6 @@ module.exports = {
       'prettier',
       'eslint-plugin-tsdoc',
       '@typescript-eslint',
-      'css-modules',
     ],
     extends: [
       'react-app',
@@ -36,7 +35,6 @@ module.exports = {
       'plugin:import/warnings',
       'plugin:import/typescript',
       'plugin:@typescript-eslint/recommended',
-      'plugin:css-modules/recommended',
     ],
     ignorePatterns: ['node_modules', 'build', 'docs', 'lib', 'react-app-env.d.ts', 'next.config.js', '.eslintrc.js'],
     settings: {

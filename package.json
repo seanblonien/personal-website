@@ -6,14 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --cache --ext .ts,.js,.tsx,.jsx . && stylelint **/*css",
-    "lint:fix": "eslint --cache --ext .ts,.js,.tsx,.jsx . --fix && stylelint **/*css --fix"
+    "lint": "eslint --cache --ext .ts,.js,.tsx,.jsx .",
+    "lint:fix": "eslint --cache --ext .ts,.js,.tsx,.jsx . --fix"
   },
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "@zeit/next-sass": "^1.0.1",
+    "@material-ui/styles": "^4.10.0",
+    "jss": "^10.4.0",
+    "jss-plugin-extend": "^10.4.0",
+    "jss-plugin-global": "^10.4.0",
     "next": "^9.5.5",
-    "node-sass": "^4.14.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-elastic-carousel": "^0.9.3",
@@ -32,7 +33,6 @@
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.13.0",
     "eslint-config-react-app": "^6.0.0",
-    "eslint-plugin-css-modules": "^2.11.0",
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsdoc": "^30.6.3",
@@ -43,10 +43,6 @@
     "eslint-plugin-tsdoc": "^0.2.7",
     "eslint-plugin-unused-imports": "^1.0.0",
     "prettier": "^2.1.2",
-    "stylelint": "^13.7.2",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-order": "^4.1.0",
-    "stylelint-prettier": "^1.1.2",
     "typescript": "^4.0.3"
   }
 }

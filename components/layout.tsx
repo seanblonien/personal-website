@@ -3,15 +3,11 @@ import Head from 'next/head';
 import React from 'react';
 import Carousel from 'react-elastic-carousel';
 import {CarouselData, NavbarData} from '../lib/data';
-// eslint-disable-next-line css-modules/no-unused-class
-import styles from '../styles/styles.module.scss';
+import {useGlobalStyles} from '../styles/theme';
 import {noop} from './utils';
 
-Layout.defaultProps = {
-  home: undefined,
-};
-
 export default function Layout(): JSX.Element {
+  const styles = useGlobalStyles();
   return (
     <>
       <Head>
@@ -52,7 +48,7 @@ export default function Layout(): JSX.Element {
           ))}
         </div>
       </header>
-      <main>
+      <main className={styles.fromBelow}>
         <Carousel
           renderArrow={({type, onClick}): JSX.Element => (
             <div onClick={onClick} onKeyPress={noop} role='button' tabIndex={0}>
