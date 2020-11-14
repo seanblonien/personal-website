@@ -36,7 +36,7 @@ module.exports = {
       'plugin:import/typescript',
       'plugin:@typescript-eslint/recommended',
     ],
-    ignorePatterns: ['node_modules', 'build', 'docs', 'lib', 'react-app-env.d.ts', 'next.config.js', '.eslintrc.js'],
+    ignorePatterns: ['node_modules', 'build', '.eslintrc.js'],
     settings: {
       'import/resolver': {
         node: {
@@ -85,6 +85,7 @@ module.exports = {
       'react/prop-types': ['off', {}],
       'react/jsx-no-undef': ['error', { 'allowGlobals': true }],
       'react/jsx-props-no-spreading': 'off',
+      'react/no-array-index-key': 'off',
       // import
       'import/extensions': [
         'error',

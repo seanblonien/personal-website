@@ -79,15 +79,18 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     h1: {
       fontSize: '4em',
       margin: '10px 0px',
+      textAlign: 'center',
       [theme.breakpoints.ltMd]: {
         fontSize: '3em',
       },
     },
     h2: {
       fontSize: '3em',
+      textAlign: 'center',
     },
     h3: {
       fontSize: '2.5em',
+      textAlign: 'center',
     },
     p: {
       maxWidth: '600px',
@@ -113,15 +116,21 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
   },
   expand: {
     transition: 'all 0.2s ease-in-out',
-  },
-  'expand:hover': {
-    extend: 'scale',
+    '&:hover': {
+      extend: 'scale',
+    },
   },
   gridContainer: {
     display: 'flex',
     flexDirection: 'row',
     width: '100%',
     maxWidth: '100%',
+  },
+  gridContainerMd: {
+    extend: 'gridContainer',
+    [theme.breakpoints.ltMd]: {
+      flexDirection: 'column',
+    },
   },
   gridContainerCol: {
     extend: 'gridContainer',
@@ -191,9 +200,6 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     extend: 'carouselIcon',
     right: 0,
   },
-  page: {
-    maxWidth: '600px',
-  },
   carousel: {
     margin: '10px auto 30px',
   },
@@ -225,5 +231,23 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     [theme.breakpoints.ltMd]: {
       height: '2.5em',
     },
+  },
+  projectPicture: {
+    borderRadius: '50%',
+    margin: '10px',
+    boxShadow: '10px -5px 8px 1px #888888',
+    width: '150px',
+    height: '150px',
+  },
+  mr1: {
+    marginRight: '10px',
+  },
+  my1: {
+    marginTop: '10px',
+    marginBottom: '10px',
+  },
+  py1: {
+    paddingTop: '10px',
+    paddingBottom: '10px',
   },
 }));

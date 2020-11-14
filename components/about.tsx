@@ -1,18 +1,18 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import Typewriter from 'typewriter-effect';
+import {cn} from '../lib/utils';
 import {useGlobalStyles} from '../styles/theme';
 
-type Props = {
+export interface AboutProps {
   introData: string[];
-};
+}
 
-export const About: React.FC<Props> = ({introData}) => {
+export const About: React.FC<AboutProps> = ({introData}) => {
   const styles = useGlobalStyles();
   return (
     <>
-      <h2 className={styles.textCenter}>About Me</h2>
-      <h3 className={`${styles.textCenter} ${styles.typewriterWrapper}`}>
+      <h2>About Me</h2>
+      <h3 className={cn(styles.typewriterWrapper)}>
         I am a
         <Typewriter
           component='span'
@@ -30,7 +30,7 @@ export const About: React.FC<Props> = ({introData}) => {
           }}
         />
       </h3>
-      <div className={`${styles.gridContainerCol} ${styles.center}`}>
+      <div className={cn(styles.gridContainerCol, styles.center)}>
         {introData.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
