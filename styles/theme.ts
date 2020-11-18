@@ -53,7 +53,7 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
       padding: '0px',
       margin: '0px',
       fontFamily: 'Play, sans-serif',
-      fontSize: '18px',
+      fontSize: '20px',
       color: theme.colors.gray,
       maxHeight: 'none',
       minWidth: '350px',
@@ -77,23 +77,23 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
       display: 'block',
     },
     h1: {
-      fontSize: '4em',
+      fontSize: '4rem',
       margin: '10px 0px',
       textAlign: 'center',
       [theme.breakpoints.ltMd]: {
-        fontSize: '3em',
+        fontSize: '3rem',
       },
     },
     h2: {
-      fontSize: '3em',
+      fontSize: '3rem',
       textAlign: 'center',
     },
     h3: {
-      fontSize: '2.5em',
+      fontSize: '2.5rem',
       textAlign: 'center',
     },
     p: {
-      maxWidth: '600px',
+      maxWidth: '700px',
       textAlign: 'justify',
     },
   },
@@ -127,18 +127,32 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     maxWidth: '100%',
   },
   gridContainerMd: {
-    extend: 'gridContainer',
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
+    maxWidth: '100%',
     [theme.breakpoints.ltMd]: {
       flexDirection: 'column',
     },
   },
   gridContainerCol: {
-    extend: 'gridContainer',
+    display: 'flex',
     flexDirection: 'column',
+    width: '100%',
+    maxWidth: '100%',
   },
   center: {
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  centerLtMd: {
+    [theme.breakpoints.ltMd]: {
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+  },
+  flex: {
+    display: 'flex',
   },
   spaceAround: {
     justifyContent: 'space-evenly',
@@ -152,6 +166,11 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     },
   },
   gridItem: {
+    [theme.breakpoints.ltMd]: {
+      margin: 'auto',
+    },
+  },
+  auto: {
     margin: 'auto',
   },
   textCenter: {
@@ -249,5 +268,11 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
   py1: {
     paddingTop: '10px',
     paddingBottom: '10px',
+  },
+  p1: {
+    padding: '10px',
+  },
+  limitWidth: {
+    maxWidth: '100vw',
   },
 }));

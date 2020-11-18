@@ -22,7 +22,7 @@ export default function Layout(): JSX.Element {
       </Head>
       <header className={cn(styles.navBar, styles.fromAbove, styles.gridContainer)}>
         <div className={cn(styles.gridContainer, styles.center)}>
-          <div className={cn(styles.gridItem, styles.gridContainer, styles.center)}>
+          <div className={cn(styles.auto, styles.gridContainer, styles.center)}>
             <h1 className={cn(styles.navTitle, styles.expand)}>Sean Blonien</h1>
             <img
               src='/images/me.jpg'
@@ -31,9 +31,7 @@ export default function Layout(): JSX.Element {
             />
           </div>
         </div>
-        <div
-          className={cn(styles.gridItem, styles.gridContainer, styles.center, styles.spaceAround)}
-        >
+        <div className={cn(styles.auto, styles.gridContainer, styles.center, styles.spaceAround)}>
           {NavbarData.map(item => (
             <a
               href={item.href}
@@ -80,7 +78,7 @@ export default function Layout(): JSX.Element {
           className={styles.carousel}
         >
           {CarouselData.map(page => (
-            <div key={page.id} className={cn(styles.center)}>
+            <div key={page.id} className={cn(styles.center, styles.limitWidth, styles.p1)}>
               {page.body}
             </div>
           ))}

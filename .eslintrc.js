@@ -86,6 +86,7 @@ module.exports = {
       'react/jsx-no-undef': ['error', { 'allowGlobals': true }],
       'react/jsx-props-no-spreading': 'off',
       'react/no-array-index-key': 'off',
+      'jsx-a11y/media-has-caption': 'off',
       // import
       'import/extensions': [
         'error',

@@ -1,0 +1,23 @@
+import Md from 'markdown-to-jsx';
+import React from 'react';
+import {Link} from './link';
+
+export interface MarkdownProps {
+  children: string;
+}
+
+export const Markdown: React.FC<MarkdownProps> = ({children}) => {
+  return (
+    <Md
+      options={{
+        overrides: {
+          Link: {
+            component: Link,
+          },
+        },
+      }}
+    >
+      {children}
+    </Md>
+  );
+};
