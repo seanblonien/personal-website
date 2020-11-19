@@ -1,6 +1,7 @@
 import React from 'react';
 import {About} from '../components/about';
 import {Project, Projects} from '../components/projects';
+import {WorkExperience, WorkExperiences} from '../components/workExperience';
 
 export interface NavbarDataItem {
   href: string;
@@ -299,20 +300,41 @@ export const ProjectData: Project[] = [
   },
 ];
 
+export const WorkExperienceData: WorkExperience[] = [
+  {
+    company: 'AT&T',
+    positionTitle: 'TDP - Engineering and Operations Intern',
+    dateRange: 'May 2018 - August 2018',
+    body: `Successfully used data analysis techniques to aggregate, automate, and visualize AT&T’s corporate Wi-Fi call center data that identifies chronic drivers. On top of saving countless hours by automating manager reports, my analysis will continue to serve as a permanent solution that will aid in breaking down over $250,000 of costs every month. This was done using VBA and Power Query M to parse and process the data and turn it into clean and meaningful tables and charts.`,
+  },
+  {
+    company: 'Baylor University',
+    positionTitle: 'Classroom Technology Assistant',
+    dateRange: 'August 2016 - March 2020',
+    body: `Provided IT support for Baylor's classroom technology throughout campus. Through daily communication with other faculty and staff members, I helped fully address problems as they arose while providing customer service. Using my technical background and troubleshooting abilities, I diagnosed and resolved hardware and software issues whether it be a projector not displaying, a device not turning on, or audio not playing. Other tasks included routine maintenance and room checks to keep campus technology as functional as possible.`,
+  },
+  {
+    company: 'Klyde Warren Park',
+    positionTitle: 'Guest Services Representative',
+    dateRange: 'Summers 2015, 2016, 2017',
+    body: `Supervised recreational equipment in the heart of Downtown Dallas's urban park. Responsibilities included providing customer service to patrons and assisting with events held at the park. While there, I automated and revamped the park’s patron counting system to a much more dynamic and easy-to-use system using Google Sheets. Additionally, I am trained to setup professional stage equipment for large or small events.`,
+  },
+];
+
 export const CarouselData = [
   {
     id: 'about',
     title: 'About',
-    body: <About introData={IntroData} />,
+    body: <About data={IntroData} />,
   },
   {
     id: 'projects',
     title: 'Projects',
-    body: <Projects projectData={ProjectData} />,
+    body: <Projects data={ProjectData} />,
   },
   {
     id: 'workexperience',
     title: 'Work Experience',
-    body: <p>Work in Progress</p>,
+    body: <WorkExperiences data={WorkExperienceData} />,
   },
 ];

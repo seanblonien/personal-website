@@ -17,16 +17,16 @@ export interface Project {
 }
 
 export interface ProjectsProps {
-  projectData: Project[];
+  data: Project[];
 }
 
-export const Projects: React.FC<ProjectsProps> = ({projectData}) => {
+export const Projects: React.FC<ProjectsProps> = ({data}) => {
   const styles = useGlobalStyles();
   return (
     <>
       <h1>Projects</h1>
       <div className={cn(styles.gridContainerCol)} />
-      {projectData.map(({title, body, techStack, picture}, idx) => (
+      {data.map(({title, body, techStack, picture}, idx) => (
         <React.Fragment key={idx}>
           <h2 className={cn(styles.my1)}>
             <Link {...title} />

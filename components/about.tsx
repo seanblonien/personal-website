@@ -4,15 +4,15 @@ import {cn} from '../lib/utils';
 import {useGlobalStyles} from '../styles/theme';
 
 export interface AboutProps {
-  introData: string[];
+  data: string[];
 }
 
-export const About: React.FC<AboutProps> = ({introData}) => {
+export const About: React.FC<AboutProps> = ({data}) => {
   const styles = useGlobalStyles();
   return (
     <>
-      <h2>About Me</h2>
-      <h3 className={cn(styles.typewriterWrapper)}>
+      <h1>About Me</h1>
+      <h2 className={cn(styles.typewriterWrapper)}>
         I am a
         <Typewriter
           component='span'
@@ -29,9 +29,9 @@ export const About: React.FC<AboutProps> = ({introData}) => {
             skipAddStyles: true,
           }}
         />
-      </h3>
+      </h2>
       <div className={cn(styles.gridContainerCol, styles.center)}>
-        {introData.map((p, i) => (
+        {data.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
       </div>

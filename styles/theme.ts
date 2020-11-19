@@ -58,6 +58,9 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
       maxHeight: 'none',
       minWidth: '350px',
     },
+    'input,button,submit': {
+      border: 'none',
+    },
     '*': {
       boxSizing: 'border-box',
       '&:focus': {
@@ -86,11 +89,15 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     },
     h2: {
       fontSize: '3rem',
+      margin: '10px 0px',
       textAlign: 'center',
+      [theme.breakpoints.ltMd]: {
+        fontSize: '2rem',
+      },
     },
     h3: {
-      fontSize: '2.5rem',
-      textAlign: 'center',
+      fontSize: '1.5rem',
+      margin: '10px 0px',
     },
     p: {
       maxWidth: '700px',
@@ -199,29 +206,6 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     height: '65px',
     width: '65px',
   },
-  carouselIcon: {
-    cursor: 'pointer',
-    position: 'absolute',
-    top: '50%',
-    width: '3em',
-    height: '3em',
-    WebkitTransitionProperty: 'width, height',
-    WebkitTransitionDuration: '1s',
-    transitionProperty: 'width, height',
-    transitionDuration: '1s',
-    '&:hover': {
-      height: '4em',
-      width: '4em',
-    },
-  },
-  carouselIconPrev: {
-    extend: 'carouselIcon',
-    left: 0,
-  },
-  carouselIconNext: {
-    extend: 'carouselIcon',
-    right: 0,
-  },
   carousel: {
     margin: '10px auto 30px',
   },
@@ -271,6 +255,10 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
   my1: {
     marginTop: '10px',
     marginBottom: '10px',
+  },
+  my2: {
+    marginTop: '20px',
+    marginBottom: '20px',
   },
   py1: {
     paddingTop: '10px',

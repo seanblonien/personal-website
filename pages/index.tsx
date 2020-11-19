@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
 import Carousel from 'react-elastic-carousel';
-import {noop} from '../components/utils';
 import {CarouselData, NavbarData} from '../lib/data';
 import {cn} from '../lib/utils';
 import {useGlobalStyles} from '../styles/theme';
@@ -48,22 +47,7 @@ export default function Layout(): JSX.Element {
       </header>
       <main className={styles.fromBelow}>
         <Carousel
-          renderArrow={({type, onClick}): JSX.Element => (
-            <div
-              onClick={onClick}
-              onKeyPress={noop}
-              role='button'
-              tabIndex={0}
-              className={cn(styles.hideLtMd)}
-            >
-              <img
-                src={type === 'PREV' ? '/images/back.svg' : '/images/next.svg'}
-                alt={type === 'PREV' ? 'Previous' : 'Next'}
-                aria-label={type === 'PREV' ? 'Previous' : 'Next'}
-                className={type === 'PREV' ? styles.carouselIconPrev : styles.carouselIconNext}
-              />
-            </div>
-          )}
+          showArrows={false}
           renderPagination={({pages, activePage, onClick}): JSX.Element => (
             <div className={styles.carouselIndicators}>
               {pages.map((page, i) => (
