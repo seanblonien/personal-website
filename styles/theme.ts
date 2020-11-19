@@ -96,6 +96,9 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
       maxWidth: '700px',
       textAlign: 'justify',
     },
+    '.rec.rec-slider-container': {
+      margin: '0px',
+    },
   },
   fromAbove: {
     animation: '$slideInFromAbove 1s ease-out 0s',
@@ -223,9 +226,13 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     margin: '10px auto 30px',
   },
   carouselIndicators: {
+    position: 'fixed',
+    bottom: '0px',
     display: 'inline-flex',
     width: '100%',
     justifyContent: 'center',
+    padding: '10px 0px',
+    backgroundColor: 'white',
   },
   carouselIndicator: {
     margin: '0px 5px',
@@ -258,8 +265,8 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     width: '150px',
     height: '150px',
   },
-  mr1: {
-    marginRight: '10px',
+  m1: {
+    margin: '10px 10px 10px 0px',
   },
   my1: {
     marginTop: '10px',
@@ -272,7 +279,9 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
   p1: {
     padding: '10px',
   },
-  limitWidth: {
-    maxWidth: '100vw',
+  hideLtMd: {
+    [theme.breakpoints.ltMd]: {
+      display: 'none',
+    },
   },
 }));

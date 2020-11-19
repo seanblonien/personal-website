@@ -49,7 +49,13 @@ export default function Layout(): JSX.Element {
       <main className={styles.fromBelow}>
         <Carousel
           renderArrow={({type, onClick}): JSX.Element => (
-            <div onClick={onClick} onKeyPress={noop} role='button' tabIndex={0}>
+            <div
+              onClick={onClick}
+              onKeyPress={noop}
+              role='button'
+              tabIndex={0}
+              className={cn(styles.hideLtMd)}
+            >
               <img
                 src={type === 'PREV' ? '/images/back.svg' : '/images/next.svg'}
                 alt={type === 'PREV' ? 'Previous' : 'Next'}
@@ -78,7 +84,7 @@ export default function Layout(): JSX.Element {
           className={styles.carousel}
         >
           {CarouselData.map(page => (
-            <div key={page.id} className={cn(styles.center, styles.limitWidth, styles.p1)}>
+            <div key={page.id} className={cn(styles.center, styles.p1)}>
               {page.body}
             </div>
           ))}

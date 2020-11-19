@@ -28,7 +28,7 @@ export const Projects: React.FC<ProjectsProps> = ({projectData}) => {
       <div className={cn(styles.gridContainerCol)} />
       {projectData.map(({title, body, techStack, picture}, idx) => (
         <React.Fragment key={idx}>
-          <h2 className={cn(styles.expand, styles.my1)}>
+          <h2 className={cn(styles.my1)}>
             <Link {...title} />
           </h2>
           <div className={styles.gridContainerMd}>
@@ -47,9 +47,9 @@ export const Projects: React.FC<ProjectsProps> = ({projectData}) => {
               </Link>
             </div>
           </div>
-          <div className={cn(styles.py1, styles.flex, styles.centerLtMd)}>
+          <div className={cn(styles.py1, styles.centerLtMd)}>
             {techStack.map((tech, i) => (
-              <span key={i} className={cn(styles.btn, styles.expand, styles.mr1)}>
+              <span key={i} className={cn(styles.btn, styles.expand, styles.m1)}>
                 <Link {...tech} />
               </span>
             ))}
