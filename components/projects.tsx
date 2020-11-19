@@ -28,14 +28,14 @@ export const Projects: React.FC<ProjectsProps> = ({data}) => {
       <div className={cn(styles.gridContainerCol)} />
       {data.map(({title, body, techStack, picture}, idx) => (
         <React.Fragment key={idx}>
-          <h2 className={cn(styles.my1)}>
+          <h2 className={cn(styles.mt5, styles.fitContent)}>
             <Link {...title} />
           </h2>
-          <div className={styles.gridContainerMd}>
+          <div className={cn(styles.gridContainerMd)}>
             <div className={styles.gridItem}>
               <Markdown>{body}</Markdown>
             </div>
-            <div className={cn(styles.auto, styles.expand)}>
+            <div className={cn(styles.autoY, styles.expand)}>
               <Link href={picture.link.href} tooltip={picture.link.tooltip}>
                 {picture.video ? (
                   <video className={styles.projectPicture} playsInline autoPlay muted loop>
@@ -47,7 +47,7 @@ export const Projects: React.FC<ProjectsProps> = ({data}) => {
               </Link>
             </div>
           </div>
-          <div className={cn(styles.py1, styles.centerLtMd)}>
+          <div className={cn(styles.centerLtMd)}>
             {techStack.map((tech, i) => (
               <span key={i} className={cn(styles.btn, styles.expand, styles.m1)}>
                 <Link {...tech} />

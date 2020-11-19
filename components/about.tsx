@@ -30,7 +30,7 @@ export const About: React.FC<AboutProps> = ({data}) => {
           }}
         />
       </h2>
-      <div className={cn(styles.gridContainerCol, styles.center)}>
+      <div className={cn(styles.gridContainerCol)}>
         {data.map((p, i) => (
           <p key={i}>{p}</p>
         ))}

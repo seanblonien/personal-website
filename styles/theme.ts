@@ -53,10 +53,10 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
       padding: '0px',
       margin: '0px',
       fontFamily: 'Play, sans-serif',
-      fontSize: '20px',
       color: theme.colors.gray,
       maxHeight: 'none',
       minWidth: '350px',
+      fontSize: '20px',
     },
     'input,button,submit': {
       border: 'none',
@@ -102,12 +102,15 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     p: {
       maxWidth: '700px',
       textAlign: 'justify',
+      marginTop: '10px',
+      marginBottom: '10px',
     },
     '.rec.rec-slider-container': {
       margin: '0px',
     },
   },
   fromAbove: {
+    fontSize: '20px',
     animation: '$slideInFromAbove 1s ease-out 0s',
   },
   fromBelow: {
@@ -157,8 +160,7 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
   },
   centerLtMd: {
     [theme.breakpoints.ltMd]: {
-      alignItems: 'center',
-      justifyContent: 'center',
+      textAlign: 'center',
     },
   },
   flex: {
@@ -182,6 +184,12 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
   },
   auto: {
     margin: 'auto',
+  },
+  autoY: {
+    margin: 'auto 0px',
+    [theme.breakpoints.ltMd]: {
+      margin: 'auto',
+    },
   },
   textCenter: {
     textAlign: 'center',
@@ -219,7 +227,7 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     backgroundColor: 'white',
   },
   carouselIndicator: {
-    margin: '0px 5px',
+    margin: '0px 8px',
   },
   active: {
     extend: 'scale',
@@ -236,6 +244,7 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     border: '1px solid transparent',
     borderRadius: '24px',
     padding: '6px 12px',
+    fontSize: '1rem',
   },
   typewriterWrapper: {
     [theme.breakpoints.ltMd]: {
@@ -256,13 +265,8 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     marginTop: '10px',
     marginBottom: '10px',
   },
-  my2: {
-    marginTop: '20px',
-    marginBottom: '20px',
-  },
-  py1: {
-    paddingTop: '10px',
-    paddingBottom: '10px',
+  mt5: {
+    marginTop: '50px',
   },
   p1: {
     padding: '10px',
@@ -271,5 +275,10 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     [theme.breakpoints.ltMd]: {
       display: 'none',
     },
+  },
+  fitContent: {
+    maxWidth: 'fit-content',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
 }));
