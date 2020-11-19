@@ -18,7 +18,7 @@ module.exports = {
     plugins: [
       'react',
       'jsx-a11y',
-      "import",
+      'import',
       'unused-imports',
       'prettier',
       'eslint-plugin-tsdoc',
@@ -68,6 +68,7 @@ module.exports = {
           bracketSpacing: false,
           jsxSingleQuote: true,
           jsxBracketSameLine: false,
+          bracketSpacing: false,
           arrowParens: 'avoid',
           tabWidth: 2,
           trailingComma: 'all',
@@ -86,6 +87,12 @@ module.exports = {
       'react/jsx-no-undef': ['error', { 'allowGlobals': true }],
       'react/jsx-props-no-spreading': 'off',
       'react/no-array-index-key': 'off',
+      'react/jsx-tag-spacing': ['error', {
+        'closingSlash': 'never',
+        'beforeSelfClosing': 'always',
+        'afterOpening': 'never',
+        'beforeClosing': 'never'
+      }],
       'jsx-a11y/media-has-caption': 'off',
       // import
       'import/extensions': [
