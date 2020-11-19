@@ -25,7 +25,7 @@ export const Projects: React.FC<ProjectsProps> = ({data}) => {
   return (
     <>
       <h1>Projects</h1>
-      <div className={cn(styles.gridContainerCol)} />
+      <div className={cn(styles.gridContainerCol, styles.center)} />
       {data.map(({title, body, techStack, picture}, idx) => (
         <React.Fragment key={idx}>
           <h2 className={cn(styles.mt5, styles.fitContent)}>

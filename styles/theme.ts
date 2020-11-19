@@ -157,6 +157,7 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
   center: {
     alignItems: 'center',
     justifyContent: 'center',
+    alignContent: 'center',
   },
   centerLtMd: {
     [theme.breakpoints.ltMd]: {
@@ -249,6 +250,9 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
   typewriterWrapper: {
     [theme.breakpoints.ltMd]: {
       height: '2.5em',
+      maxWidth: 'fit-content',
+      marginLeft: 'auto',
+      marginRight: 'auto',
     },
   },
   projectPicture: {
