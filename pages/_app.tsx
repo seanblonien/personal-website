@@ -3,6 +3,7 @@ import {create} from 'jss';
 import extend from 'jss-plugin-extend';
 import global from 'jss-plugin-global';
 import {AppProps} from 'next/app';
+import Head from 'next/head';
 import React from 'react';
 import ReactGA from 'react-ga';
 import {theme} from '../styles/theme';
@@ -21,10 +22,18 @@ export default function App({Component, pageProps}: AppProps): JSX.Element {
   }, []);
 
   return (
-    <StylesProvider jss={jss}>
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </StylesProvider>
+    <>
+      <Head>
+        <meta
+          name='viewport'
+          content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0'
+        />
+      </Head>
+      <StylesProvider jss={jss}>
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </StylesProvider>
+    </>
   );
 }

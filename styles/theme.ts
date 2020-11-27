@@ -255,10 +255,12 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
       marginRight: 'auto',
     },
   },
+  shadow: {
+    boxShadow: '10px -5px 8px 1px #888888',
+    borderRadius: '50%',
+  },
   projectPicture: {
     borderRadius: '50%',
-    margin: '10px',
-    boxShadow: '10px -5px 8px 1px #888888',
     width: '150px',
     height: '150px',
   },

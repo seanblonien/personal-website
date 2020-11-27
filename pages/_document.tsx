@@ -8,10 +8,9 @@ export default class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Play' />
-          <meta
-            name='viewport'
-            content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0'
+          <link
+            rel='stylesheet'
+            href='https://fonts.googleapis.com/css?family=Play&subset=latin-ext&display=swap'
           />
         </Head>
         <body>

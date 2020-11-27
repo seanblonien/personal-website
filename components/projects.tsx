@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import {cn} from '../lib/utils';
 import {useGlobalStyles} from '../styles/theme';
@@ -35,14 +36,20 @@ export const Projects: React.FC<ProjectsProps> = ({data}) => {
             <div className={styles.gridItem}>
               <Markdown>{body}</Markdown>
             </div>
-            <div className={cn(styles.autoY, styles.expand)}>
+            <div className={cn(styles.autoY, styles.expand, styles.p1)}>
               <Link href={picture.link.href} tooltip={picture.link.tooltip}>
                 {picture.video ? (
                   <video className={styles.projectPicture} playsInline autoPlay muted loop>
                     <source src={picture.src} type='video/webm' />
                   </video>
                 ) : (
-                  <img src={picture.src} className={styles.projectPicture} alt={picture.alt} />
+                  <Image
+                    src={picture.src}
+                    className={cn(styles.projectPicture)}
+                    alt={picture.alt}
+                    width={150}
+                    height={150}
+                  />
                 )}
               </Link>
             </div>
