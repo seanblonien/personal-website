@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import Carousel from 'react-elastic-carousel';
+import {NavIcon} from '../components/NavIcon';
 import {CarouselData, NavbarData} from '../lib/data';
 import {cn} from '../lib/utils';
 import {useGlobalStyles} from '../styles/theme';
@@ -23,11 +24,7 @@ export default function Layout(): JSX.Element {
         <div className={cn(styles.gridContainer, styles.center)}>
           <div className={cn(styles.auto, styles.gridContainer, styles.center)}>
             <h1 className={cn(styles.navTitle, styles.expand)}>Sean Blonien</h1>
-            <img
-              src='/images/me.jpg'
-              alt='Sean Blonien Profile'
-              className={cn(styles.navIcon, styles.expand)}
-            />
+            <NavIcon src='/images/me.jpg' alt='Sean Blonien Profile' />
           </div>
         </div>
         <div className={cn(styles.auto, styles.gridContainer, styles.center, styles.spaceAround)}>
@@ -40,7 +37,7 @@ export default function Layout(): JSX.Element {
               data-toggle='tooltip'
               data-placement='bottom'
             >
-              <img src={item.src} className={cn(styles.navIcon, styles.expand)} alt={item.alt} />
+              <NavIcon src={item.src} alt={item.alt} />
             </a>
           ))}
         </div>
