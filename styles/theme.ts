@@ -285,4 +285,7 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     marginLeft: 'auto',
     marginRight: 'auto',
   },
+  linkNoColor: {
+    color: 'white',
+  },
 }));

@@ -57,7 +57,7 @@ export const Projects: React.FC<ProjectsProps> = ({data}) => {
           <div className={cn(styles.centerLtMd)}>
             {techStack.map((tech, i) => (
               <span key={i} className={cn(styles.btn, styles.expand, styles.m1)}>
-                <Link {...tech} />
+                <Link {...tech} noColor />
               </span>
             ))}
           </div>

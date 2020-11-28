@@ -1,8 +1,10 @@
 import React from 'react';
+import {useGlobalStyles} from '../styles/theme';
 
 export type LinkProps = {
   href?: string;
   tooltip?: string;
+  noColor?: boolean;
 } & (
   | {
       label: string;
@@ -14,7 +16,8 @@ export type LinkProps = {
     }
 );
 
-export const Link: React.FC<LinkProps> = ({href, tooltip, label, children}) => {
+export const Link: React.FC<LinkProps> = ({href, tooltip, label, children, noColor}) => {
+  const styles = useGlobalStyles();
   return href ? (
     <a
       href={href}
@@ -23,6 +26,7 @@ export const Link: React.FC<LinkProps> = ({href, tooltip, label, children}) => {
       title={tooltip}
       target='_blank'
       rel='noreferrer'
+      className={noColor ? styles.linkNoColor : ''}
     >
       {children || label}
     </a>
