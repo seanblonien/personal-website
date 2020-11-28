@@ -7,12 +7,7 @@ export default class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang='en'>
-        <Head>
-          <link
-            rel='stylesheet'
-            href='https://fonts.googleapis.com/css?family=Play&subset=latin-ext&display=swap'
-          />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />

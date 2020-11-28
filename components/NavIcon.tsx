@@ -11,12 +11,15 @@ export interface NavIconProps {
 export const NavIcon: React.FC<NavIconProps> = ({src, alt}) => {
   const styles = useGlobalStyles();
   return (
-    <Image
-      src={src}
-      alt={alt}
-      className={cn(styles.navIcon, styles.expand)}
-      height={65}
-      width={65}
-    />
+    <div className={cn(styles.expand, styles.bright)}>
+      <Image
+        src={src}
+        alt={alt}
+        className={cn(styles.navIcon)}
+        height={65}
+        width={65}
+        quality={95}
+      />
+    </div>
   );
 };

@@ -7,6 +7,7 @@ import Head from 'next/head';
 import React from 'react';
 import ReactGA from 'react-ga';
 import {theme} from '../styles/theme';
+import '../styles/font.css';
 
 ReactGA.initialize('UA-115754951-1');
 

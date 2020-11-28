@@ -83,6 +83,7 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
       fontSize: '4rem',
       margin: '10px 0px',
       textAlign: 'center',
+      zIndex: '1',
       [theme.breakpoints.ltMd]: {
         fontSize: '3rem',
       },
@@ -131,6 +132,11 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     transition: 'all 0.2s ease-in-out',
     '&:hover': {
       extend: 'scale',
+    },
+  },
+  bright: {
+    '&:hover': {
+      filter: 'brightness(110%)',
     },
   },
   gridContainer: {
@@ -216,7 +222,7 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     width: '65px',
   },
   carousel: {
-    margin: '10px auto 30px',
+    margin: '10px auto 60px',
   },
   carouselIndicators: {
     position: 'fixed',
