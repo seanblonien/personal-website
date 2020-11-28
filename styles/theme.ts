@@ -110,20 +110,12 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
       margin: '0px',
     },
   },
-  fromAbove: {
-    fontSize: '20px',
-    animation: '$slideInFromAbove 1s ease-out 0s',
+  zoom: {
+    animation: '$zoom 1s ease-out 0s',
   },
-  fromBelow: {
-    animation: '$slideInFromBelow 1s ease-out 0s',
-  },
-  '@keyframes slideInFromAbove': {
-    from: {transform: 'translateY(-100%)'},
-    to: {transform: 'translateY(0)'},
-  },
-  '@keyframes slideInFromBelow': {
-    from: {transform: 'translateY(200%)'},
-    to: {transform: 'translateY(0)'},
+  '@keyframes zoom': {
+    from: {transform: 'scale(0.25)'},
+    to: {transform: 'scale(1.0)'},
   },
   scale: {
     transform: 'scale(1.1)',

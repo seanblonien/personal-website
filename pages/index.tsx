@@ -20,7 +20,7 @@ export default function Layout(): JSX.Element {
         />
         <meta name='description' content="Sean Blonien's personal website." />
       </Head>
-      <header className={cn(styles.navBar, styles.fromAbove, styles.gridContainer)}>
+      <header className={cn(styles.navBar, styles.gridContainer)}>
         <div className={cn(styles.gridContainer, styles.center)}>
           <div className={cn(styles.auto, styles.gridContainer, styles.center)}>
             <h1 className={cn(styles.navTitle, styles.expand)}>Sean Blonien</h1>
@@ -42,7 +42,7 @@ export default function Layout(): JSX.Element {
           ))}
         </div>
       </header>
-      <main className={styles.fromBelow}>
+      <main>
         <Carousel
           showArrows={false}
           renderPagination={({pages, activePage, onClick}): JSX.Element => (
@@ -62,10 +62,10 @@ export default function Layout(): JSX.Element {
               ))}
             </div>
           )}
-          className={styles.carousel}
+          className={cn(styles.carousel)}
         >
           {CarouselData.map(page => (
-            <div key={page.id} className={cn(styles.center, styles.p1)}>
+            <div key={page.id} className={cn(styles.center, styles.zoom, styles.p1)}>
               {page.body}
             </div>
           ))}
