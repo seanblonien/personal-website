@@ -1,7 +1,10 @@
 import {jssPreset, StylesProvider, ThemeProvider} from '@material-ui/styles';
 import {create} from 'jss';
+import camelCase from 'jss-plugin-camel-case';
+import compose from 'jss-plugin-compose';
 import extend from 'jss-plugin-extend';
 import global from 'jss-plugin-global';
+import nested from 'jss-plugin-nested';
 import {AppProps} from 'next/app';
 import Head from 'next/head';
 import React from 'react';
@@ -12,7 +15,7 @@ import '../styles/font.css';
 ReactGA.initialize('UA-115754951-1');
 
 const jss = create({
-  plugins: [...jssPreset().plugins, extend(), global()],
+  plugins: [...jssPreset().plugins, global(), camelCase(), nested(), extend(), compose()],
 });
 
 export default function App({Component, pageProps}: AppProps): JSX.Element {

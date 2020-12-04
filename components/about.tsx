@@ -12,7 +12,7 @@ export const About: React.FC<AboutProps> = ({data}) => {
   return (
     <>
       <h1>About Me</h1>
-      <h2 className={cn(styles.typewriterWrapper)}>
+      <h2 className={cn(styles.typewriterWrapper, styles.bright)}>
         I am a
         <Typewriter
           component='span'

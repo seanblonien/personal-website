@@ -36,6 +36,8 @@ export const theme = {
     gtSm: `@media screen and (max-width: ${mdMin})`,
     gtMd: `@media screen and (max-width: ${lgMin})`,
     gtLg: `@media screen and (max-width: ${xlMin})`,
+    lt: (pixelWidth: string): string => `@media screen and (max-width: ${pixelWidth})`,
+    gt: (pixelWidth: string): string => `@media screen and (max-width: ${pixelWidth})`,
   },
   colors: {
     gray: '#343a40',
@@ -138,19 +140,14 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     maxWidth: '100%',
   },
   gridContainerMd: {
-    display: 'flex',
-    flexDirection: 'row',
-    width: '100%',
-    maxWidth: '100%',
+    composes: '$gridContainer',
     [theme.breakpoints.ltMd]: {
       flexDirection: 'column',
     },
   },
   gridContainerCol: {
-    display: 'flex',
+    composes: '$gridContainer',
     flexDirection: 'column',
-    width: '100%',
-    maxWidth: '100%',
   },
   center: {
     alignItems: 'center',
@@ -202,10 +199,8 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     },
   },
   navTitle: {
-    extend: 'textCenter',
-    color: '#f1f2f4',
-    alignContent: 'center',
-    justifyContent: 'center',
+    composes: '$textCenter',
+    color: theme.colors.white,
     margin: '0px 10px',
   },
   navIcon: {
@@ -219,17 +214,21 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
   carouselIndicators: {
     position: 'fixed',
     bottom: '0px',
+    left: '0px',
     display: 'inline-flex',
     width: '100%',
     justifyContent: 'center',
     padding: '10px 0px',
     backgroundColor: 'white',
+    [theme.breakpoints.lt('400px')]: {
+      display: 'none',
+    },
   },
   carouselIndicator: {
     margin: '0px 8px',
   },
   active: {
-    extend: 'scale',
+    composes: '$scale',
     fontWeight: 'bold',
   },
   btn: {
