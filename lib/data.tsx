@@ -46,17 +46,10 @@ export const NavbarData: NavbarDataItem[] = [
 ];
 
 export const IntroData = [
-  `Hello there! I'm a software engineer from Dallas, Texas. I am passionate about designing, developing,
-  and programming all things software. Whether it be web, app, or game development, I have a wide
-  range of experience and excitement in all things tech. I am continually looking forward to future
-  projects and opportunities!`,
-  `My mission is to contribute to society by developing impactful and meaningful software that resolves
-  unsatisfied needs that improves the lives of my family, friends, and community as a whole.`,
-  `As a junior pursuing a Bachelors of Science in Computer Science at Baylor University, I am expecting
-  to graduate May 2020. When I'm not developing something amazing, I enjoy hanging out with friends,
-  hitting the gym, going to EDM concerts, watching eSports, playing games, and reading philosophy and
-  science literature.`,
-  `Since you made it this far, take a look at some of my projects to see what I've done!`,
+  `Hey there 👋! I'm a software engineer from Dallas, Texas. I am passionate about designing, developing, and programming all things software. Whether it be web, app, or game development, I have a wide  range of experience and excitement in all things tech. I am continually looking forward to future projects and opportunities!`,
+  `My mission is to develop impactful and meaningful software that meets unsatisfied needs which improves the lives of my family, friends, and community at large.`,
+  ` I am currently working full-time at Pariveda Solutions as a Software Consultant in Dallas. When I'm not working, I enjoy hanging out with friends, running, EDM concerts, eSports, video games, and reading philosophy and science books.`,
+  `Since you made it this far, swipe or switch tabs to see my portfolio of projects and professional experience.`,
 ];
 
 export const ProjectData: Project[] = [
