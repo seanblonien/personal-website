@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Image from 'next/image';
 import React from 'react';
 import {cn} from '../lib/utils';
@@ -37,7 +38,7 @@ export const Projects: React.FC<ProjectsProps> = ({data}) => {
               <Markdown>{body}</Markdown>
             </div>
             <div className={cn(styles.autoY, styles.expand, styles.p1)}>
-              <Link href={picture.link.href} tooltip={picture.link.tooltip}>
+              <Link src={picture.link.src} tooltip={picture.link.tooltip}>
                 {picture.video ? (
                   <video className={styles.projectPicture} playsInline autoPlay muted loop>
                     <source src={picture.src} type='video/webm' />
