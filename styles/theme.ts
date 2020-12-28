@@ -287,4 +287,22 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
   linkNoColor: {
     color: 'white',
   },
+  showOnHover: {
+    position: 'relative',
+    '& img': {
+      display: 'none',
+    },
+    '&:hover img': {
+      display: 'block',
+      position: 'absolute',
+      objectFit: 'contain',
+      top: '100%',
+      left: '0',
+      zIndex: 'auto',
+      backgroundColor: theme.colors.white,
+      border: `2px solid ${theme.colors.gray}`,
+      borderRadius: 10,
+      padding: 5,
+    },
+  },
 }));

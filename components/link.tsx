@@ -1,10 +1,12 @@
 import React from 'react';
+import {cn} from '../lib/utils';
 import {useGlobalStyles} from '../styles/theme';
 
 export type LinkProps = {
-  href?: string;
+  src?: string;
   tooltip?: string;
   noColor?: boolean;
+  hoverSrc?: string;
 } & (
   | {
       label: string;
@@ -16,19 +18,20 @@ export type LinkProps = {
     }
 );
 
-export const Link: React.FC<LinkProps> = ({href, tooltip, label, children, noColor}) => {
+export const Link: React.FC<LinkProps> = ({src, tooltip, label, children, noColor, hoverSrc}) => {
   const styles = useGlobalStyles();
-  return href ? (
+  return src || hoverSrc ? (
     <a
-      href={href}
+      href={src}
       data-toggle='tooltip'
       data-placement='auto'
       title={tooltip}
       target='_blank'
       rel='noreferrer'
-      className={noColor ? styles.linkNoColor : ''}
+      className={cn(noColor && styles.linkNoColor, hoverSrc && styles.showOnHover)}
     >
       {children || label}
+      {hoverSrc && <img src={hoverSrc} alt={tooltip} />}
     </a>
   ) : (
     <span>{children || label}</span>

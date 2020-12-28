@@ -4,9 +4,11 @@ import {useGlobalStyles} from '../styles/theme';
 
 export interface WorkExperience {
   company: string;
-  positionTitle: string;
-  dateRange: string;
-  body: string;
+  positions: {
+    positionTitle: string;
+    dateRange: string;
+    body: string;
+  }[];
 }
 
 export interface WorkExperienceProps {
@@ -22,9 +24,13 @@ export const WorkExperiences: React.FC<WorkExperienceProps> = ({data}) => {
         {data.map((experience, i) => (
           <div key={i} className={cn(styles.my1)}>
             <h2>{experience.company}</h2>
-            <h3>{experience.positionTitle}</h3>
-            <h4>{experience.dateRange}</h4>
-            <p>{experience.body}</p>
+            {experience.positions.map(position => (
+              <>
+                <h3>{position.positionTitle}</h3>
+                <h4>{position.dateRange}</h4>
+                <p>{position.body}</p>
+              </>
+            ))}
           </div>
         ))}
       </div>
