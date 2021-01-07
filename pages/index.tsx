@@ -65,7 +65,7 @@ export default function Layout(): JSX.Element {
           className={cn(styles.carousel)}
         >
           {CarouselData.map(page => (
-            <div key={page.id} className={cn(styles.center, styles.zoom, styles.p1)}>
+            <div key={page.id} className={cn(styles.center, styles.zoom, styles.p1)} id={page.id}>
               {page.body}
             </div>
           ))}

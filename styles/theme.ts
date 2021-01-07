@@ -77,10 +77,6 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
         textDecoration: 'underline',
       },
     },
-    img: {
-      maxWidth: '100%',
-      display: 'block',
-    },
     h1: {
       fontSize: '4rem',
       margin: '10px 0px',
@@ -295,14 +291,12 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
     '&:hover img': {
       display: 'block',
       position: 'absolute',
-      objectFit: 'contain',
       top: '100%',
-      left: '0',
-      zIndex: 'auto',
+      left: '-50%',
+      zIndex: '1',
       backgroundColor: theme.colors.white,
       border: `2px solid ${theme.colors.gray}`,
       borderRadius: 10,
-      padding: 5,
     },
   },
 }));

@@ -24,12 +24,12 @@ export const WorkExperiences: React.FC<WorkExperienceProps> = ({data}) => {
         {data.map((experience, i) => (
           <div key={i} className={cn(styles.my1)}>
             <h2>{experience.company}</h2>
-            {experience.positions.map(position => (
-              <>
+            {experience.positions.map((position, i) => (
+              <React.Fragment key={i}>
                 <h3>{position.positionTitle}</h3>
                 <h4>{position.dateRange}</h4>
                 <p>{position.body}</p>
-              </>
+              </React.Fragment>
             ))}
           </div>
         ))}

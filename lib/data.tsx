@@ -67,7 +67,7 @@ export const ProjectData: Project[] = [
       src: '/images/arch.svg',
       alt: 'Archway Logo',
     },
-    body: `<p>For my computer science capstone competition in Spring 2020, my team of 5 others and I built Baylor's <Link src='/Baylor Computer Science Capstone Course Problem Statement - Spring 2020.docx' tooltip='Problem Statement'>Capstone Content Management System v2.0</Link>, which we later named <Link tooltip='Archway' hoverSrc='/images/archway.png'>Archway</Link>. Picking up from <Link hoverSrc='/images/cappy.png'>previous semester's work</Link>, we built a web app that universities could use to manage, host, and showcase capstone projects accross the university. We focused on designing a centralized solution that could be used acrross all deparments that was easy to manage for IT webmasters, professors, company sponsors, and students. In the end, we had confiurable theming, dynamic page structure and content using an in-app Markdown/HMTL editor, roles and permissions, email confirmation, and admin panels. We presented and demoed our solution to faculty and won first place in the competition against 4 other teams.</p>`,
+    body: `<p>For my computer science capstone competition in Spring 2020, my team of 5 others and I built Baylor's <Link src='/Baylor_Computer_Science_Capstone_Course_Problem_Statement_-_Spring_2020.docx' tooltip='Problem Statement'>Capstone Content Management System v2.0</Link>, which we later named <Link tooltip='Archway' hoverSrc='/images/archway.png'>Archway</Link>. Picking up from <Link hoverSrc='/images/cappy.png' tooltip='Cappy'>previous semester's work</Link>, we built a <Link hoverSrc='/images/archway_home.png' tooltip='Archway Home'>web app</Link> that universities could use to manage, host, and showcase capstone projects accross the university. We focused on designing a centralized solution that could be used acrross all deparments that was easy to manage for IT webmasters, professors, company sponsors, and students. In the end, we had <Link hoverSrc='/images/archway_custom_theming.png' tooltip='Archway Theming Dashboard'>configurable theming</Link>, dynamic page structure and content using an <Link hoverSrc='/images/archway_editor.png' tooltip='Archway In-App Editor'>in-app Markdown/HMTL editor</Link>, comprehensive <Link hoverSrc='/images/archway_create_capstone.png' tooltip='Archway Create Capstone Page'>capstone management</Link>, a <Link hoverSrc='/images/archway_proposal_request.png' tooltip='Archway Sonsorship Proposal Request'>sponsor project process</Link>, <Link hoverSrc='/images/archway_roles.png' tooltip='Archway Roles'>multiple roles</Link> and <Link hoverSrc='/images/archway_permissions.png' tooltip='Archway Permissions'>permissions</Link>, <Link hoverSrc='/images/archway_sign_in.png' tooltip='Archway Sign In'>login with <Link hoverSrc='/images/archway_account_confirmation.png' tooltip='Archway Email Account Confirmation'>email confirmation</Link>, and administration panels with <Link hoverSrc='/images/archway_import_users.png' tooltip='Archway Import Users'>import</Link>, export, and backup functionality. We <Link hoverSrc='/images/archway_final_presentation.png' tooltip='Archway Final Presentation Team Photo'>presented</Link> and demoed our solution to faculty and won first place in the competition against 4 other teams.</p>`,
     techStack: [
       {
         label: 'React',
@@ -77,6 +77,9 @@ export const ProjectData: Project[] = [
       },
       {
         label: 'MaterialUI',
+      },
+      {
+        label: 'Docker',
       },
       {
         label: 'MongoDB',
