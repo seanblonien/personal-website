@@ -22,8 +22,9 @@ export type LinkProps = {
 export const Link: React.FC<LinkProps> = ({src, tooltip, label, children, noColor, hoverSrc}) => {
   const styles = useGlobalStyles();
   const size = useWindowSize();
+  const Component = hoverSrc ? 'span' : 'a';
   return src || hoverSrc ? (
-    <a
+    <Component
       href={src}
       data-toggle='tooltip'
       data-placement='auto'
@@ -41,7 +42,7 @@ export const Link: React.FC<LinkProps> = ({src, tooltip, label, children, noColo
           loading='lazy'
         />
       )}
-    </a>
+    </Component>
   ) : (
     <span>{children || label}</span>
   );

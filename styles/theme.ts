@@ -285,6 +285,11 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
   },
   showOnHover: {
     position: 'relative',
+    color: theme.colors.blue,
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'underline',
+    },
     '& img': {
       display: 'none',
     },
