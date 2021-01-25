@@ -6,18 +6,16 @@ export interface MarkdownProps {
   children: string;
 }
 
-export const Markdown: React.FC<MarkdownProps> = ({children}) => {
-  return (
-    <Md
-      options={{
-        overrides: {
-          Link: {
-            component: Link,
-          },
+export const Markdown: React.FC<MarkdownProps> = ({children}) => (
+  <Md
+    options={{
+      overrides: {
+        Link: {
+          component: Link,
         },
-      }}
-    >
-      {children}
-    </Md>
-  );
-};
+      },
+    }}
+  >
+    {children}
+  </Md>
+);

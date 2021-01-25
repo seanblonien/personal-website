@@ -2,13 +2,21 @@ module.exports = {
     root: true,
     parser: '@typescript-eslint/parser',
     parserOptions: {
-      project: './tsconfig.json',
+      project: 'tsconfig.json',
       sourceType: 'module', // Allows for the use of imports
       ecmaFeatures: {
         jsx: true,
       },
       warnOnUnsupportedTypeScriptVersion: true
     },
+    overrides: [
+      {
+        files: ['*.ts', '*.tsx'], // Your TypeScript files extension
+        parserOptions: {
+          project: ['./tsconfig.json'], // Specify it only for TypeScript files
+        },
+      }
+    ],
     env: {
       node: true,
       browser: true,

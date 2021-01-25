@@ -12,7 +12,7 @@ const lgMax = '1919px';
 
 export const theme = {
   /**
-   * Used to do media queries within JSS syle objects.
+   * Used to do media queries within JSS style objects.
    *
    * e.g.
    * makeStyles(theme = > ({

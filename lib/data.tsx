@@ -46,9 +46,9 @@ export const NavbarData: NavbarDataItem[] = [
 ];
 
 export const IntroData = [
-  `Hey there 👋! I'm a software engineer from Dallas, Texas. I am passionate about designing, developing, and programming all things software. Whether it be web, app, or game development, I have a wide  range of experience and excitement in all things tech. I am continually looking forward to future projects and opportunities!`,
+  `Hey there 👋! I'm a software engineer from Dallas, Texas. I am passionate about designing, developing, and programming all things software. Whether it be web, app, or game development, I have a wide range of experience and excitement in all things tech. I am continually looking forward to future projects and opportunities!`,
   `My mission is to develop impactful and meaningful software that meets unsatisfied needs which improves the lives of my family, friends, and community at large.`,
-  ` I am currently working full-time at Pariveda Solutions as a Software Consultant in Dallas. When I'm not working, I enjoy hanging out with friends, running, EDM concerts, eSports, video games, and reading philosophy and science books.`,
+  `I am currently working full-time at Pariveda Solutions as a Software Consultant in Dallas. When I'm not working, I enjoy hanging out with friends, running, EDM concerts, eSports, video games, and reading philosophy and science books.`,
   `Since you made it this far, swipe or switch tabs to see my portfolio of projects and professional experience.`,
 ];
 
@@ -67,7 +67,7 @@ export const ProjectData: Project[] = [
       src: '/images/arch.svg',
       alt: 'Archway Logo',
     },
-    body: `<p>For my computer science capstone competition in Spring 2020, my team of 5 others and I built Baylor's <Link src='/Baylor_Computer_Science_Capstone_Course_Problem_Statement_-_Spring_2020.docx' tooltip='Problem Statement'>Capstone Content Management System v2.0</Link>, which we later named <Link tooltip='Archway' hoverSrc='/images/archway.png'>Archway</Link>. Picking up from <Link hoverSrc='/images/cappy.png' tooltip='Cappy'>previous semester's work</Link>, we built a <Link hoverSrc='/images/archway_home.png' tooltip='Archway Home'>web app</Link> that universities could use to manage, host, and showcase capstone projects accross the university. We focused on designing a centralized solution that could be used acrross all deparments that was easy to manage for IT webmasters, professors, company sponsors, and students. In the end, we had <Link hoverSrc='/images/archway_custom_theming.png' tooltip='Archway Theming Dashboard'>configurable theming</Link>, dynamic page structure and content using an <Link hoverSrc='/images/archway_editor.png' tooltip='Archway In-App Editor'>in-app Markdown/HMTL editor</Link>, comprehensive <Link hoverSrc='/images/archway_create_capstone.png' tooltip='Archway Create Capstone Page'>capstone management</Link>, a <Link hoverSrc='/images/archway_proposal_request.png' tooltip='Archway Sonsorship Proposal Request'>sponsor project process</Link>, <Link hoverSrc='/images/archway_roles.png' tooltip='Archway Roles'>multiple roles</Link> and <Link hoverSrc='/images/archway_permissions.png' tooltip='Archway Permissions'>permissions</Link>, <Link hoverSrc='/images/archway_sign_in.png' tooltip='Archway Sign In'>login with <Link hoverSrc='/images/archway_account_confirmation.png' tooltip='Archway Email Account Confirmation'>email confirmation</Link>, and administration panels with <Link hoverSrc='/images/archway_import_users.png' tooltip='Archway Import Users'>import</Link>, export, and backup functionality. We <Link hoverSrc='/images/archway_final_presentation.png' tooltip='Archway Final Presentation Team Photo'>presented</Link> and demoed our solution to faculty and won first place in the competition against 4 other teams.</p>`,
+    body: `<p>For my computer science capstone competition in Spring 2020, my team of 5 others and I built Baylor's <Link src='/Baylor_Computer_Science_Capstone_Course_Problem_Statement_-_Spring_2020.docx' tooltip='Problem Statement'>Capstone Content Management System v2.0</Link>, which we later named <Link tooltip='Archway' hoverSrc='/images/archway.png'>Archway</Link>. Picking up from <Link hoverSrc='/images/cappy.png' tooltip='Cappy'>previous semester's work</Link>, we built a <Link hoverSrc='/images/archway_home.png' tooltip='Archway Home'>web app</Link> that universities could use to manage, host, and showcase capstone projects accross the university. We focused on designing a centralized solution that could be used across all departments that was easy to manage for IT webmasters, professors, company sponsors, and students. In the end, we had <Link hoverSrc='/images/archway_custom_theming.png' tooltip='Archway Theming Dashboard'>configurable theming</Link>, dynamic page structure and content using an <Link hoverSrc='/images/archway_editor.png' tooltip='Archway In-App Editor'>in-app Markdown/HTML editor</Link>, comprehensive <Link hoverSrc='/images/archway_create_capstone.png' tooltip='Archway Create Capstone Page'>capstone management</Link>, a <Link hoverSrc='/images/archway_proposal_request.png' tooltip='Archway Sonsorship Proposal Request'>sponsor project process</Link>, <Link hoverSrc='/images/archway_roles.png' tooltip='Archway Roles'>multiple roles</Link> and <Link hoverSrc='/images/archway_permissions.png' tooltip='Archway Permissions'>permissions</Link>, <Link hoverSrc='/images/archway_sign_in.png' tooltip='Archway Sign In'>login with <Link hoverSrc='/images/archway_account_confirmation.png' tooltip='Archway Email Account Confirmation'>email confirmation</Link>, and administration panels with <Link hoverSrc='/images/archway_import_users.png' tooltip='Archway Import Users'>import</Link>, export, and backup functionality. We <Link hoverSrc='/images/archway_final_presentation.png' tooltip='Archway Final Presentation Team Photo'>presented</Link> and demoed our solution to faculty and won first place in the competition against 4 other teams.</p>`,
     techStack: [
       {
         label: 'React',
@@ -86,35 +86,6 @@ export const ProjectData: Project[] = [
       },
       {
         label: 'Headless CMS',
-      },
-    ],
-  },
-  {
-    title: {
-      label: 'Black Gospel Music VR',
-      src: 'https://github.com/Baylor-VR-Club-Development-Team/black-gospel-music-vr',
-      tooltip: 'Black Gospel Music VR on GitHub',
-    },
-    picture: {
-      link: {
-        src: 'http://digitalcollections.baylor.edu/cdm/portal/collection/fa-gospel',
-        tooltip: 'Black Gospel Music Restoration Project',
-      },
-      src: '/images/black_gospel.jpg',
-      alt: 'Black Gospel Music Restoration Project',
-    },
-    body: `<p>As the Project Manager of <Link src='https://baylorvrclub.com/' tooltip='Baylor VR Club Website'>Baylors Virtual Reality Club</Link> Development team, my team and I, along with Baylor's Library System and other departments, are currently working to create a VR experience so that users can experience the expansive archive of the most at-risk pieces and ephemera from <Link src='http://digitalcollections.baylor.edu/cdm/portal/collection/fa-gospel' tooltip='Black Gospel Music Restoration Project'> Baylor's Black Gospel Music Restoration Project</Link> in a permanent and interactive manner. The collection has various types of media formats from United States between the 1940's through the 1980's, all of which will be able to be experienced within VR. My team is sponsored by the <Link src='https://developer.oculus.com/oculus-start/' tooltip='Oculus Start'>Oculus Start</Link> program, which provides our 10 developers with a free Oculus Rift and Oculus Go. Even though we are still in development, we plan on making this experience into a permanent feature at Baylor's <Link src='https://www.baylor.edu/mayborn/' tooltip='Mayborn Museum'> Mayborn Museum</Link>, <Link src='https://www.baylor.edu/lib/' tooltip='Baylor Moody Library'>Moody Library</Link> on Baylor's campus, and potentially at the <Link src='https://music.si.edu/story/nmaahc-welcomes-gospel-recordings-baylor-university' tooltip='Black Gospel Music Restoration Project at the Smithsonian'>Smithsonian</Link> where the history project is already featured. Responsibilities of my project manager position include managing team resources, leading others, teaching others, decision making, task delegation, and facilitating communication between the developers, designers, artists, and faculty members.</p>`,
-    techStack: [
-      {
-        label: 'C++',
-      },
-      {
-        label: 'UE4',
-        src: 'https://www.unrealengine.com/en-US/what-is-unreal-engine-4',
-        tooltip: 'Unreal Engine Website',
-      },
-      {
-        label: 'VR Development',
       },
     ],
   },
@@ -153,6 +124,64 @@ export const ProjectData: Project[] = [
   },
   {
     title: {
+      label: 'For The Queen!',
+      src: 'https://github.com/seanblonien/AntGame',
+      tooltip: 'For The Queen! on GitHub',
+    },
+    picture: {
+      link: {
+        src: 'https://github.com/seanblonien/AntGame',
+        tooltip: 'For The Queen! on GitHub',
+      },
+      src: '/images/forTheQueen.png',
+      alt: 'For The Queen! Main Menu',
+    },
+    body: `<p>At the <Link src="http://www.chillennium.com" label="Chillenium Homepage">Chillenium 2019</Link> game jam at Texas A&M, my team and I made a co-op multiplayer puzzle game where two players work together as ants to help save the queen. The game jam theme was "All For One" which is why we choose to make a cooperative strategy game where the players work together for a common goal. We used the Unity game engine to quickly develop and prototype the game within a 48 hour period. We did not win any awards, but it was a great team experience centered around game development. You can play the game on the game's <Link src="https://itch.io/jam/chillennium/rate/494612" label="For The Queen! Official Submission Page on itch.io">official submission page</Link>.</p>`,
+    techStack: [
+      {
+        label: 'C#',
+      },
+      {
+        label: 'Unity',
+        src: 'https://unity.com/',
+        tooltip: 'Unity Website',
+      },
+      {
+        label: 'Game Development',
+      },
+    ],
+  },
+  {
+    title: {
+      label: 'Black Gospel Music VR',
+      src: 'https://github.com/Baylor-VR-Club-Development-Team/black-gospel-music-vr',
+      tooltip: 'Black Gospel Music VR on GitHub',
+    },
+    picture: {
+      link: {
+        src: 'http://digitalcollections.baylor.edu/cdm/portal/collection/fa-gospel',
+        tooltip: 'Black Gospel Music Restoration Project',
+      },
+      src: '/images/black_gospel.jpg',
+      alt: 'Black Gospel Music Restoration Project',
+    },
+    body: `<p>While serving as the Project Manager of <Link src='https://baylorvrclub.com/' tooltip='Baylor VR Club Website'>Baylor's Virtual Reality Club</Link>, a team of club members and I, along with the Baylor Library System, worked to create a VR experience that showcased the expansive archive of the most at-risk pieces and ephemera from <Link src='http://digitalcollections.baylor.edu/cdm/portal/collection/fa-gospel' tooltip='Black Gospel Music Restoration Project'> Baylor's Black Gospel Music Restoration Project</Link> in a permanent and interactive manner. The collection has various types of media formats from United States between the 1940's through the 1980's, all of which could be experienced within VR. The team was sponsored by the <Link src='https://developer.oculus.com/oculus-start/' tooltip='Oculus Start'>Oculus Start</Link> program which provided our developers with free Oculus equipment. There were plans to make this experience into a permanent feature at Baylor's <Link src='https://www.baylor.edu/mayborn/' tooltip='Mayborn Museum'> Mayborn Museum</Link>, <Link src='https://www.baylor.edu/lib/' tooltip='Baylor Moody Library'>Moody Library</Link> on Baylor's campus, and potentially at the <Link src='https://music.si.edu/story/nmaahc-welcomes-gospel-recordings-baylor-university' tooltip='Black Gospel Music Restoration Project at the Smithsonian'>Smithsonian</Link> where the history project is already featured, but unfortunately, project development stopped after lack of interest in VR development and the COVID-19 pandemic. The project had working music records, art, and a southern Baptist church environment, but it was never completed. Source code, documentation, and assets are all available in the Github repo.</p>`,
+    techStack: [
+      {
+        label: 'C++',
+      },
+      {
+        label: 'UE4',
+        src: 'https://www.unrealengine.com/en-US/what-is-unreal-engine-4',
+        tooltip: 'Unreal Engine Website',
+      },
+      {
+        label: 'VR Development',
+      },
+    ],
+  },
+  {
+    title: {
       label: 'CryptoKit',
       src: 'https://github.com/seanblonien/CryptoKit',
       tooltip: 'CryptoKit on GitHub',
@@ -165,7 +194,7 @@ export const ProjectData: Project[] = [
       src: '/images/cryptokit.png',
       alt: 'CryptoKit Logo',
     },
-    body: `<p>For my Software Engineering and Java courses' final project spring 2018, I made an Android app that tracked crypto asset prices using public price data from <Link src="https://coinmarketcap.com/" label="CoinMarketCap">CoinMarketCap</Link>. For now, the app has a login and registration system using <Link src="https://firebase.google.com/" label="Google Firebase">Google Firebase</Link> so that it can eventually be expanded to save favorite assets, sync across devices, and store portfolio information. The user can easily see price and other detailed asset information such as price change, volume, market cap, and a brief description of the asset. The app was made using software engineering best practices and methods. Please view the <Link src="https://github.com/seanblonien/CryptoKit/blob/master/Crypto%20Kit%20Report%20and%20Documentation.pdf" label="CryptoKit Documentation">documentation</Link> for more information.</p>`,
+    body: `<p>For my Software Engineering and Java courses' final project spring 2018, I made an Android app that tracked crypto asset prices using public price data from <Link src="https://coinmarketcap.com/" label="CoinMarketCap">CoinMarketCap</Link>. The app has a login and registration system using <Link src="https://firebase.google.com/" label="Google Firebase">Google Firebase</Link> so that it could eventually be expanded to save favorite assets, sync across devices, and store portfolio information, but that was never fully implemented. The user can easily see price and other detailed asset information such as price change, volume, market cap, and a brief description of the asset. The app was made using the software engineering best practices and methodology with accompanying documentation. Please view the <Link src="https://github.com/seanblonien/CryptoKit/blob/master/Crypto%20Kit%20Report%20and%20Documentation.pdf" label="CryptoKit Documentation">documentation</Link> for more information.</p>`,
     techStack: [
       {
         label: 'Firebase',
@@ -198,7 +227,7 @@ export const ProjectData: Project[] = [
       alt: 'C Bear Necessities Preview',
       video: true,
     },
-    body: `<p>For <Link src="https://www.hacklahoma.org/" title="Hacklahoma Homepage">Hacklahoma 2018</Link>, my team <i>C Bears</i> and I created a website that visualized data provided by <Link src="https://v3v10.vitechinc.com/hacklahoma/challenge.html" title="Vitech Challenge Overview">Vitech</Link>. The website uses Google Maps API to show aggregated data related to life insurance based on location and other factors. The map can be filtered such that users can choose only to see the "bear necessities." Additionally there are interactive charts such that user can visualize the data graphically. Here's a link to our <Link src="https://devpost.com/software/cbearnecessities" title="CBearNecessities on Devpost">Devpost submission</Link>.</p>`,
+    body: `<p>For <Link src="https://www.hacklahoma.org/" title="Hacklahoma Homepage">Hacklahoma 2018</Link>, my team <i>C Bears</i> and I created a website that visualized data provided by <Link src="https://v3v10.vitechinc.com/hacklahoma/challenge.html" title="Vitech Challenge Overview">Vitech</Link>. The website uses Google Maps API to show aggregated data related to life insurance based on location and other factors. The map can be filtered such that users can choose only to see the "bear necessities." Additionally there are interactive charts such that user can visualize the data graphically. This was one of my first hackathons, so it was mostly a learning experience after all. Here's a link to our <Link src="https://devpost.com/software/cbearnecessities" title="CBearNecessities on Devpost">Devpost submission</Link>.</p>`,
     techStack: [
       {
         label: 'MongoDB',

@@ -45,6 +45,7 @@ export default function Layout(): JSX.Element {
       <main>
         <Carousel
           showArrows={false}
+          isRTL={false}
           renderPagination={({pages, activePage, onClick}): JSX.Element => (
             <div className={styles.carouselIndicators}>
               {pages.map((page, i) => (
