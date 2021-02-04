@@ -28,7 +28,7 @@ export const Link: React.FC<LinkProps> = ({src, tooltip, label, children, noColo
       href={src}
       data-toggle='tooltip'
       data-placement='auto'
-      title={tooltip || label}
+      title={tooltip || label || (typeof children === 'string' ? children : undefined)}
       target='_blank'
       rel='noreferrer'
       className={cn(noColor && styles.linkNoColor, hoverSrc && styles.showOnHover)}

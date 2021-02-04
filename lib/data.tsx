@@ -55,6 +55,39 @@ export const IntroData = [
 export const ProjectData: Project[] = [
   {
     title: {
+      label: 'Trusted',
+      src: 'https://github.com/My-Sober-Companion/MySoberCompanion',
+      tooltip: 'Trusted on GitHub',
+    },
+    picture: {
+      link: {
+        src: 'https://github.com/My-Sober-Companion/MySoberCompanion',
+        tooltip: 'Trusted on GitHub',
+      },
+      src: '/images/trusted_logo.png',
+      alt: 'Trusted Logo',
+    },
+    body: `<p>For Pariveda's first <Link src='https://www.linkedin.com/posts/pariveda-solutions_parivedas-hackathon-for-social-good-activity-6754892678846038016-sUns' tooltip="Pariveda's Hackathon for Social Good on LinkedIn">Hackathon for Social Good</Link> in 2020, my team of consultants and I built a <Link tooltip='Mobile App Preview' hoverSrc='/images/trusted_app_screen.png'>mobile app</Link> to help addiction recovery. The app centers around a <Link hoverSrc='/images/trusted_phoenix.png'>Phoenix</Link>, representing the recovering addicts, that levels up from doing trust building exercises, such as <Link hoverSrc='/images/trusted_location_check-in.png' tooltip='Location Check-in Screenshot'>location check-ins</Link>. The Phoenix's team members and sponsors can use the app to track critical metrics such as biometric data, location, and journal entries. Made in collaboration with a mother who knows what it's like for a loved one to face addition, we used positive reinforcement and gamification as a mechanism to rebuild trust with those around the Phoenix. Since this was done in a short ~36 hour time period, the app was not fully functional when we ended, but the architecture was in place. We presented and demoed our solution to the whole firm at <Link src='https://parivedafinfest.com'>Finfest</Link>, and won Fin Favorite and Fimplementation awards for our project against 5 other teams. See the <Link src='/Trusted_Deck.pptx' tooltip='Trusted PowerPoint Presentation and Screenshots'>presentation</Link> for more.</p>`,
+    techStack: [
+      {
+        label: 'React Native',
+      },
+      {
+        label: 'AWS Amplify',
+      },
+      {
+        label: 'Expo',
+      },
+      {
+        label: 'GraphQL',
+      },
+      {
+        label: 'DynamoDB',
+      },
+    ],
+  },
+  {
+    title: {
       label: 'Archway',
       src: 'https://github.com/seanblonien/archway',
       tooltip: 'Archway on GitHub',
