@@ -12,7 +12,8 @@ export default function Layout(): JSX.Element {
     <>
       <Head>
         <title>Sean Blonien | Software Engineer</title>
-        <link rel='shortcut icon' href='/images/sean_logo.png' />
+        <link rel='icon' type='image/svg+xml' href='/images/sean_logo.svg' />
+        <link rel='alternate icon' href='/images/sean_logo.png' />
         <meta name='author' content='Sean Blonien' />
         <meta
           name='keywords'
@@ -52,7 +53,7 @@ export default function Layout(): JSX.Element {
                 <button
                   type='button'
                   key={i}
-                  onClick={(): void => onClick(String(i))}
+                  onClick={(): void => (activePage !== i ? onClick(String(i)) : undefined)}
                   className={cn(styles.btn, styles.expand, styles.carouselIndicator, {
                     [styles.active]: activePage === i,
                   })}
