@@ -25,7 +25,7 @@ export default function Layout(): JSX.Element {
         <div className={cn(styles.gridContainer, styles.center)}>
           <div className={cn(styles.auto, styles.gridContainer, styles.center)}>
             <h1 className={cn(styles.navTitle, styles.expand)}>Sean Blonien</h1>
-            <NavIcon src='/images/me.webp' alt='Sean Blonien Profile' />
+            <NavIcon src='/images/sean_square.webp' alt='Sean Blonien Profile Image' />
           </div>
         </div>
         <div className={cn(styles.auto, styles.gridContainer, styles.center, styles.spaceAround)}>

@@ -26,13 +26,13 @@ export const Projects: React.FC<ProjectsProps> = ({data}) => {
   const styles = useGlobalStyles();
   return (
     <>
-      <h1>Projects</h1>
+      <h2>Projects</h2>
       <div className={cn(styles.gridContainerCol, styles.center)} />
       {data.map(({title, body, techStack, picture}, idx) => (
         <React.Fragment key={idx}>
-          <h2 className={cn(styles.mt5, styles.fitContent)}>
+          <h3 className={cn(styles.mt5, styles.fitContent)}>
             <Link {...title} />
-          </h2>
+          </h3>
           <div className={cn(styles.gridContainerMd)}>
             <div className={styles.gridItem}>
               <Markdown>{body}</Markdown>

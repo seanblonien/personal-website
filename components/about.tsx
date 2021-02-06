@@ -11,8 +11,8 @@ export const About: React.FC<AboutProps> = ({data}) => {
   const styles = useGlobalStyles();
   return (
     <>
-      <h1>About Me</h1>
-      <h2 className={cn(styles.typewriterWrapper, styles.bright)}>
+      <h2>About Me</h2>
+      <h3 className={cn(styles.typewriterWrapper, styles.bright)}>
         I am a
         <Typewriter
           component='span'
@@ -29,7 +29,7 @@ export const About: React.FC<AboutProps> = ({data}) => {
             skipAddStyles: true,
           }}
         />
-      </h2>
+      </h3>
       <div className={cn(styles.gridContainerCol)}>
         {data.map((p, i) => (
           <p key={i}>{p}</p>

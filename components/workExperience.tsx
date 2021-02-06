@@ -19,15 +19,15 @@ export const WorkExperiences: React.FC<WorkExperienceProps> = ({data}) => {
   const styles = useGlobalStyles();
   return (
     <>
-      <h1>Work Experience</h1>
+      <h2>Work Experience</h2>
       <div className={cn(styles.gridContainerCol)}>
         {data.map((experience, i) => (
           <div key={i} className={cn(styles.my1)}>
-            <h2>{experience.company}</h2>
+            <h3>{experience.company}</h3>
             {experience.positions.map((position, i) => (
               <React.Fragment key={i}>
-                <h3>{position.positionTitle}</h3>
-                <h4>{position.dateRange}</h4>
+                <h4>{position.positionTitle}</h4>
+                <h5>{position.dateRange}</h5>
                 <p>{position.body}</p>
               </React.Fragment>
             ))}

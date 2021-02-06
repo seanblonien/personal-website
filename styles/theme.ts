@@ -77,7 +77,7 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
         textDecoration: 'underline',
       },
     },
-    h1: {
+    'h1,h2': {
       fontSize: '4rem',
       margin: '10px 0px',
       textAlign: 'center',
@@ -86,7 +86,7 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
         fontSize: '3rem',
       },
     },
-    h2: {
+    h3: {
       fontSize: '3rem',
       margin: '10px 0px',
       textAlign: 'center',
@@ -94,7 +94,7 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
         fontSize: '2rem',
       },
     },
-    h3: {
+    h4: {
       fontSize: '1.5rem',
       margin: '10px 0px',
     },
@@ -161,14 +161,6 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
   spaceAround: {
     justifyContent: 'space-evenly',
   },
-  navbar: {
-    backgroundColor: '#343a40',
-    minWidth: '350px',
-    padding: '10px',
-    [theme.breakpoints.ltMd]: {
-      flexDirection: 'column',
-    },
-  },
   gridItem: {
     [theme.breakpoints.ltMd]: {
       margin: 'auto',
@@ -189,9 +181,9 @@ export const useGlobalStyles = makeStyles((theme: ThemeType) => ({
   navBar: {
     backgroundColor: theme.colors.gray,
     minWidth: '350px',
-    padding: '10px',
     [theme.breakpoints.ltMd]: {
       flexDirection: 'column',
+      padding: '10px',
     },
   },
   navTitle: {
