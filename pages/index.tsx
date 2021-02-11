@@ -12,7 +12,6 @@ export default function Layout(): JSX.Element {
     <>
       <Head>
         <title>Sean Blonien | Software Engineer</title>
-        <link rel='icon' type='image/svg+xml' href='/images/sean_logo.svg' />
         <link rel='alternate icon' href='/images/sean_logo.png' />
         <meta name='author' content='Sean Blonien' />
         <meta
@@ -25,7 +24,7 @@ export default function Layout(): JSX.Element {
         <div className={cn(styles.gridContainer, styles.center)}>
           <div className={cn(styles.auto, styles.gridContainer, styles.center)}>
             <h1 className={cn(styles.navTitle, styles.expand)}>Sean Blonien</h1>
-            <NavIcon src='/images/sean_square.webp' alt='Sean Blonien Profile Image' />
+            <NavIcon src='/images/sean_square.png' alt='Sean Blonien Profile Image' />
           </div>
         </div>
         <div className={cn(styles.auto, styles.gridContainer, styles.center, styles.spaceAround)}>

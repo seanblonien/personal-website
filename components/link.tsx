@@ -23,12 +23,13 @@ export const Link: React.FC<LinkProps> = ({src, tooltip, label, children, noColo
   const styles = useGlobalStyles();
   const size = useWindowSize();
   const Component = hoverSrc ? 'span' : 'a';
+  const title = tooltip || label || (typeof children === 'string' ? children : undefined);
   return src || hoverSrc ? (
     <Component
       href={src}
       data-toggle='tooltip'
       data-placement='auto'
-      title={tooltip || label || (typeof children === 'string' ? children : undefined)}
+      title={title}
       target='_blank'
       rel='noreferrer'
       className={cn(noColor && styles.linkNoColor, hoverSrc && styles.showOnHover)}
