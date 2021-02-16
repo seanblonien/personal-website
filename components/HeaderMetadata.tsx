@@ -13,7 +13,7 @@ export function HeaderMetadata(): JSX.Element {
       <meta name='MobileOptimized' content='350' />
       <meta property='og:title' content={m.title} />
       <meta property='og:type' content='website' />
-      <meta property='og:url' content='/' />
+      <meta property='og:url' content={m.rooUrl} />
       <meta property='og:image' content={m.previewImage} />
       <meta property='og:description' content={m.description} />
       <meta name='twitter:card' content='summary' />

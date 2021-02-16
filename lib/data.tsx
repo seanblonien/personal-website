@@ -462,7 +462,8 @@ export const MetaData = {
   title: 'Sean Blonien | Software Engineer',
   favicon: '/images/sean_logo.png',
   description: "Sean Blonien's personal website.",
-  previewImage: '/images/website_preview.png',
+  rooUrl: 'https://seanblonien.com',
+  previewImage: 'https://seanblonien.com/images/website_preview.png',
   themeColor: theme.colors.gray,
   twitterHandle: '@seanblonien',
   keywords:
