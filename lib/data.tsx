@@ -2,6 +2,7 @@ import React from 'react';
 import {About} from '../components/about';
 import {Project, Projects} from '../components/projects';
 import {WorkExperience, WorkExperiences} from '../components/workExperience';
+import {theme} from '../styles/theme';
 
 export interface NavbarDataItem {
   href: string;
@@ -456,3 +457,14 @@ export const CarouselData = [
     body: <WorkExperiences data={WorkExperienceData} />,
   },
 ];
+
+export const MetaData = {
+  title: 'Sean Blonien | Software Engineer',
+  favicon: '/images/sean_logo.png',
+  description: "Sean Blonien's personal website.",
+  previewImage: '/images/website_preview.png',
+  themeColor: theme.colors.gray,
+  twitterHandle: '@seanblonien',
+  keywords:
+    'animalis app application automated baylor capstone consultant development documentation dynamic frontend backend full-stack engineering game manager presented programming project software solution system team technology vr virtual reality crypto internship agile hackathon pariveda aries chillenium animalis strapi docker archway mysobercompanion',
+};
