@@ -367,14 +367,12 @@ export const ProjectData: Project[] = [
   {
     title: {
       label: 'Smart Mirror',
-      src:
-        'https://docs.google.com/presentation/d/1CFzvFWoStCu7TJGGeivMuw04JY6aV-RUMOTybCxexwA/edit?usp=sharing',
+      src: 'https://docs.google.com/presentation/d/1CFzvFWoStCu7TJGGeivMuw04JY6aV-RUMOTybCxexwA/edit?usp=sharing',
       tooltip: 'Smart Mirror Presentation',
     },
     picture: {
       link: {
-        src:
-          'https://docs.google.com/presentation/d/1CFzvFWoStCu7TJGGeivMuw04JY6aV-RUMOTybCxexwA/edit?usp=sharing',
+        src: 'https://docs.google.com/presentation/d/1CFzvFWoStCu7TJGGeivMuw04JY6aV-RUMOTybCxexwA/edit?usp=sharing',
         tooltip: 'Smart Mirror Presentation',
       },
       src: '/images/smart_mirror.jpg',

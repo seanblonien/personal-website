@@ -5,7 +5,7 @@ import compose from 'jss-plugin-compose';
 import extend from 'jss-plugin-extend';
 import global from 'jss-plugin-global';
 import nested from 'jss-plugin-nested';
-import {AppProps} from 'next/app';
+import {type AppProps} from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import ReactGA from 'react-ga';
@@ -18,7 +18,7 @@ const jss = create({
   plugins: [...jssPreset().plugins, global(), camelCase(), nested(), extend(), compose()],
 });
 
-export default function App({Component, pageProps}: AppProps): JSX.Element {
+const App: React.FC<AppProps> = ({Component, pageProps}) => {
   React.useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
@@ -40,4 +40,6 @@ export default function App({Component, pageProps}: AppProps): JSX.Element {
       </StylesProvider>
     </>
   );
-}
+};
+
+export default App;

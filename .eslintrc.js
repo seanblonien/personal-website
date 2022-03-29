@@ -37,8 +37,6 @@ module.exports = {
       'airbnb',
       'airbnb/hooks',
       'prettier',
-      'prettier/react',
-      'prettier/@typescript-eslint',
       'plugin:import/errors',
       'plugin:import/warnings',
       'plugin:import/typescript',
@@ -75,8 +73,7 @@ module.exports = {
           singleQuote: true,
           bracketSpacing: false,
           jsxSingleQuote: true,
-          jsxBracketSameLine: false,
-          bracketSpacing: false,
+          bracketSameLine: false,
           arrowParens: 'avoid',
           tabWidth: 2,
           trailingComma: 'all',
@@ -90,6 +87,8 @@ module.exports = {
       '@typescript-eslint/no-object-literal-type-assertion': 'off',
       '@typescript-eslint/no-use-before-define': 'warn',
       // React
+      'react/react-in-jsx-scope': 'off',
+      'react/require-default-props': 'off',
       'react/jsx-filename-extension': ['error', {extensions: ['.tsx']}],
       'react/prop-types': ['off', {}],
       'react/jsx-no-undef': ['error', { 'allowGlobals': true }],
@@ -101,6 +100,7 @@ module.exports = {
         'afterOpening': 'never',
         'beforeClosing': 'never'
       }],
+      'react/function-component-definition': ['error', {namedComponents: 'arrow-function'}],
       'jsx-a11y/media-has-caption': 'off',
       // import
       'import/extensions': [

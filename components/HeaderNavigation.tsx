@@ -4,7 +4,7 @@ import {cn} from '../lib/utils';
 import {useGlobalStyles} from '../styles/theme';
 import {NavIcon} from './NavIcon';
 
-export function HeaderNavigation(): JSX.Element {
+export const HeaderNavigation: React.FC = () => {
   const styles = useGlobalStyles();
   return (
     <header className={cn(styles.navBar, styles.gridContainer)}>
@@ -23,6 +23,8 @@ export function HeaderNavigation(): JSX.Element {
             download={item.download}
             data-toggle='tooltip'
             data-placement='bottom'
+            target='_blank'
+            rel='noreferrer'
           >
             <NavIcon src={item.src} alt={item.alt} />
           </a>
@@ -30,4 +32,4 @@ export function HeaderNavigation(): JSX.Element {
       </div>
     </header>
   );
-}
+};

@@ -1,4 +1,3 @@
-import React from 'react';
 import Carousel from 'react-elastic-carousel';
 import {HeaderMetadata} from '../components/HeaderMetadata';
 import {HeaderNavigation} from '../components/HeaderNavigation';
@@ -6,7 +5,7 @@ import {CarouselData} from '../lib/data';
 import {cn} from '../lib/utils';
 import {useGlobalStyles} from '../styles/theme';
 
-export default function Layout(): JSX.Element {
+const Layout: React.FC = () => {
   const styles = useGlobalStyles();
   return (
     <>
@@ -44,4 +43,6 @@ export default function Layout(): JSX.Element {
       </main>
     </>
   );
-}
+};
+
+export default Layout;
