@@ -1,4 +1,4 @@
-import React from 'react';
+import {Fragment} from 'react';
 import {cn} from '../lib/utils';
 import {useGlobalStyles} from '../styles/theme';
 
@@ -25,11 +25,11 @@ export const WorkExperiences: React.FC<WorkExperienceProps> = ({data}) => {
           <div key={i} className={cn(styles.my1)}>
             <h3>{experience.company}</h3>
             {experience.positions.map((position, i) => (
-              <React.Fragment key={i}>
+              <Fragment key={i}>
                 <h4>{position.positionTitle}</h4>
                 <h5>{position.dateRange}</h5>
                 <p>{position.body}</p>
-              </React.Fragment>
+              </Fragment>
             ))}
           </div>
         ))}

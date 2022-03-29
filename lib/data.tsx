@@ -1,7 +1,6 @@
-import React from 'react';
 import {About} from '../components/about';
-import {Project, Projects} from '../components/projects';
-import {WorkExperience, WorkExperiences} from '../components/workExperience';
+import {type Project, Projects} from '../components/projects';
+import {type WorkExperience, WorkExperiences} from '../components/workExperience';
 import {theme} from '../styles/theme';
 
 export interface NavbarDataItem {

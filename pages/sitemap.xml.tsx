@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import {ServerResponse} from 'http';
-import {NextPageContext} from 'next';
+import {type NextPageContext} from 'next';
 
 const toUrl = (host: string, route: string): string =>
   `<url><loc>http://www.${host}${route}</loc></url>`;

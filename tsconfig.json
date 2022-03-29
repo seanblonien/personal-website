@@ -20,7 +20,11 @@
     "noEmit": true,
     "jsx": "preserve",
     "preserveValueImports": true,
-    "incremental": true
+    "incremental": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "global.d.ts"
+    ],
   },
   "exclude": [
     "node_modules"

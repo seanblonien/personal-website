@@ -1,4 +1,3 @@
-import React from 'react';
 import {NavbarData} from '../lib/data';
 import {cn} from '../lib/utils';
 import {useGlobalStyles} from '../styles/theme';

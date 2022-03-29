@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Image from 'next/image';
-import React from 'react';
+import {Fragment} from 'react';
 import {cn} from '../lib/utils';
 import {useGlobalStyles} from '../styles/theme';
-import {Link, LinkProps} from './link';
+import {Link, type LinkProps} from './link';
 import {Markdown} from './markdown';
 
 export interface Project {
@@ -29,7 +29,7 @@ export const Projects: React.FC<ProjectsProps> = ({data}) => {
       <h2>Projects</h2>
       <div className={cn(styles.gridContainerCol, styles.center)} />
       {data.map(({title, body, techStack, picture}, idx) => (
-        <React.Fragment key={idx}>
+        <Fragment key={idx}>
           <h3 className={cn(styles.mt5, styles.fitContent)}>
             <Link {...title} />
           </h3>
@@ -62,7 +62,7 @@ export const Projects: React.FC<ProjectsProps> = ({data}) => {
               </span>
             ))}
           </div>
-        </React.Fragment>
+        </Fragment>
       ))}
     </>
   );

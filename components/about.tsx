@@ -1,4 +1,3 @@
-import React from 'react';
 import Typewriter from 'typewriter-effect';
 import {cn} from '../lib/utils';
 import {useGlobalStyles} from '../styles/theme';

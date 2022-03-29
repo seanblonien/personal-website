@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import React from 'react';
 import {MetaData as m} from '../lib/data';
 
 export const HeaderMetadata: React.FC = () => (

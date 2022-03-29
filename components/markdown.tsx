@@ -1,5 +1,4 @@
 import Md from 'markdown-to-jsx';
-import React from 'react';
 import {Link} from './link';
 
 export interface MarkdownProps {

@@ -1,4 +1,3 @@
-import React from 'react';
 import {useWindowSize} from '../lib/hooks';
 import {cn} from '../lib/utils';
 import {useGlobalStyles} from '../styles/theme';
